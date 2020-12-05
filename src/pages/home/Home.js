@@ -22,7 +22,7 @@ export class Home extends Component {
 							<div className='Menu'>
 								<a href='https://www.linkedin.com/in/weliton-sousa-330a29190/' target='blank'><Text>Linkedin</Text></a>
 								<a href='https://github.com/Weliton-Sousa' target='blank'><Text>GitHub</Text></a>
-								<a href='https://github.com/Weliton-Sousa' target='blank'><Text>GitLab</Text></a>
+								<a href='https://gitlab.com/Weliton_Uzumaki' target='blank'><Text>GitLab</Text></a>
 							</div>
 						</div>
 					</div>
