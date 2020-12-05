@@ -1,0 +1,19 @@
+.Title{
+  color: white;
+  margin: 1pc;
+}
+.Menu-text{
+  text-align: justify;
+  color: gray; 
+  margin: 0;
+  margin-right: 1pc;
+  margin-left: 1pc;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 699px){
+  .Menu-text{
+    font-size: 15px;
+    text-align: start;
+  }
+}

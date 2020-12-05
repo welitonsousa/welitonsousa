@@ -1,0 +1,73 @@
+/* CSS geral*/
+.Body{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.Menu-right{
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    min-width: 70%
+}
+.Menu{
+    display: flex;
+    flex-direction: row;
+}
+.Content{
+    background-color: #50555f;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: -0.6%;
+}
+.Menu-left{
+    background-color: #dddddd;
+    min-width: 30%;
+    min-height: 100vh;
+}
+.Info-weliton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.imagem-profile{
+    border-radius: 50%;
+    align-self: center;
+    width: 50%;
+}
+.Box-profile{
+    min-width: 30%;
+    width: 30%;
+    min-height: 100%;
+    display: -webkit-flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+/* CSS para celular */
+@media screen and (max-width: 699px){
+    .imagem-profile{
+        width: 90%;
+    }
+    .Info-weliton{
+        font-size: 10px;
+    }
+    .Box-profile{
+        min-width: 40%;
+        width: 40%;
+    }
+    .Content{
+        margin: -1%;
+    }
+    .Ul{
+        text-align: left;
+        padding: 0;
+        padding-left: 10px;
+    }
+    .Menu-right{ 
+        min-width: 60%;
+    }
+    .Menu-left{
+        min-width: 40%;
+    }
+}
