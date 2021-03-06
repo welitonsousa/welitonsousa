@@ -1,0 +1,27 @@
+div > .nav-link{
+  color: white !important;
+}
+
+.footer{
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+.distance-bottom{
+  padding-bottom: 2rem;
+}
+.distance-top{
+  margin-top: 2rem;
+}
+footer a{
+  color: white;
+  align-self: center;
+  text-decoration: none !important;
+}
+footer h5 {
+  padding-left: 7%;
+  color: white;
+}
+footer a :hover{
+  color: white;
+  text-decoration: none !important;
+}

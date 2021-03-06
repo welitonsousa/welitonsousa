@@ -1,0 +1,38 @@
+.content{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.content-post{ 
+  padding-top: 30px;
+}
+.content-post :hover{ 
+  text-decoration: none;
+}
+
+.post-item{
+  text-align: left;
+  width: 70%;
+  padding-left: 10px;
+}
+
+.description{
+  margin: 10px;
+} 
+
+.title{
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgb(49, 47, 47);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.image{
+  max-height: 100px;
+  border-radius: 10px;
+}

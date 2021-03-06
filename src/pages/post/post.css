@@ -1,0 +1,25 @@
+.itens{
+  width: 70%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.image-title{
+  width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+h1{
+  padding-top: 20px;
+}
+h3{
+  padding-top: 20px;
+}
+.materia{
+  text-align: justify;
+}
+.image-example{
+  width: 50%;
+}
