@@ -12,6 +12,10 @@ div > .nav-link{
 .distance-top{
   margin-top: 2rem;
 }
+.my-row{
+  display: flex;
+  flex-direction: row;
+}
 footer a{
   color: white;
   align-self: center;

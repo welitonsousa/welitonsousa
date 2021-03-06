@@ -24,7 +24,7 @@ const Routes = () => {
 					<Route path="/posts" exact={true} component={Posts} />
 				</Switch>
 			</ BrowserRouter>
-				<footer className="footer bg-dark row distance-top">
+				<footer className="footer bg-dark distance-top my-row">
 					<a href="https://github.com/welitonsousa" target="blank"> <div>GitHub</div></a>
 					<a href="https://gitlab.com/welitonsousa" target="blank"> <div>GitLab</div></a>
 					<a href="https://www.linkedin.com/in/weliton-sousa-330a29190/" target="blank"> <div>Linkedin</div></a>

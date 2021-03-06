@@ -4,6 +4,7 @@ import { Api } from "../../services/connection";
 import profile from '../../assets/images/weliton-profile.jpg'
 
 import './home.css';
+import '../../style.css'
 
 const Home = () => {
 	const [data, setData] = useState(undefined);
@@ -21,7 +22,7 @@ const Home = () => {
 	return (
 		data ?
 		<div>
-			<Row>
+			<div className="my-row">
 				<Col xs={6} md={4} className="content-image-profile">
 					<div>
 						<Image src={profile} roundedCircle className="profile-image"/>
@@ -61,7 +62,7 @@ const Home = () => {
 					<h4>Formação:</h4>
 					{data.formation.map((e) => <div key={`${e}`}>{e}</div>)}
 				</Col>
-			</Row>
+			</div>
 		</div> : <div/>
 	)
 }
