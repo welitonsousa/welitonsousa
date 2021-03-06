@@ -26,7 +26,7 @@ const Posts = () => {
           <a href={`/post?id=${e.id}`}>
             <Row className="title">
               <div >{e.data.title}</div>
-              <div>{e.data.date}</div>
+              <div>{e.data.dateShow}</div>
             </Row>
           </a>
           <div className="description">
