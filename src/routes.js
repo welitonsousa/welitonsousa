@@ -14,6 +14,7 @@ const Routes = () => {
 				<Nav className="mr-auto">
 					<Nav.Link href="/">Home</Nav.Link>
 					<Nav.Link href="/posts">Blog</Nav.Link>
+					<Nav.Link href="https://github.com/welitonsousa" target="blank">GitHub</Nav.Link>
 				</Nav>
 			</Navbar>
 			<BrowserRouter >

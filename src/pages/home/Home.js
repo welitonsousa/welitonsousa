@@ -25,8 +25,18 @@ const Home = () => {
 				<Col xs={6} md={4} className="content-image-profile">
 					<div>
 						<Image src={profile} roundedCircle className="profile-image"/>
+						<h5>Weliton de Sousa Araujo</h5>
 						<div className="left">
-							
+							<h3>Projetos: </h3>
+							{data.projects.map((e) =>(
+
+								<div>
+								<a key={e.title.toString()} href={e.link} target="blank">
+									<h5 className="project-color">{e.title}</h5>
+								</a>
+								<p>{e.description}</p>
+							</div>)) 
+							}
 						</div>
 					</div>
 				</Col>

@@ -21,3 +21,10 @@
 .nav-item{
   color: black !important;
 }
+.project-color{
+  text-decoration: none !important;
+  color: dimgray;
+}
+a {
+  text-decoration: none !important;
+}
