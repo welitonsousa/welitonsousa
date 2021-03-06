@@ -17,8 +17,8 @@ const Routes = () => {
 					<Nav.Link href="https://github.com/welitonsousa" target="blank">GitHub</Nav.Link>
 				</Nav>
 			</Navbar>
-			<BrowserRouter >
-				<Switch>
+			<BrowserRouter className="min-size-heigth">
+				<Switch >
 					<Route path="/" exact={true} component={Home} />
 					<Route path="/post" exact={true} component={Post} />
 					<Route path="/posts" exact={true} component={Posts} />

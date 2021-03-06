@@ -16,6 +16,10 @@ div > .nav-link{
   display: flex;
   flex-direction: row;
 }
+.min-size-heigth{
+  min-height: 100vh !important;
+}
+
 footer a{
   color: white;
   align-self: center;

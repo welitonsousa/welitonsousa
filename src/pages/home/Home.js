@@ -4,7 +4,6 @@ import { Api } from "../../services/connection";
 import profile from '../../assets/images/weliton-profile.jpg'
 
 import './home.css';
-import '../../style.css'
 
 const Home = () => {
 	const [data, setData] = useState(undefined);
@@ -63,7 +62,7 @@ const Home = () => {
 					{data.formation.map((e) => <div key={`${e}`}>{e}</div>)}
 				</Col>
 			</div>
-		</div> : <div/>
+		</div> : <div className="min-size-heigth"/>
 	)
 }
 

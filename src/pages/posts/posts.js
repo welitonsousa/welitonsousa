@@ -19,7 +19,7 @@ const Posts = () => {
 
   return (
   data !== undefined ?
-  <div className="content">
+  <div className="content min-size-heigth">
     <div className="post-item">
       {data.map((e)=> (
         <div key={e.id} className="content-post">
@@ -41,7 +41,7 @@ const Posts = () => {
         </div>
       ))}  
     </div>
-  </div>: <div className="content"/>
+  </div>: <div className="min-size-heigth"/>
   )
 }
 export {Posts}

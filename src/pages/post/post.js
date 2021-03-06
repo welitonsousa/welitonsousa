@@ -27,7 +27,7 @@ const Post = () => {
   
   return (
     data ?
-  <div className="content">
+  <div className="content min-size-heigth">
     <div className="itens">
       <Image className="image-title" src={`${data.image}`}/>
       <h1>{data.title}</h1>
@@ -43,6 +43,6 @@ const Post = () => {
         {data.repo !== {} ? <a target="blank" href={`${data.repo.link}`}>{data.repo.title}</a> : <div/>}
       </div>
     </div>
-  </div> : <div/>)
+  </div> : <div className="min-size-heigth"/>)
 }
 export {Post};
