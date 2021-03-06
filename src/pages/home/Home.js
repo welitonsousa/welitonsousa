@@ -57,16 +57,6 @@ const Home = () => {
 							<Tab key={`${index}`} eventKey={e.title} title={<p>{e.title}</p>}><ul>{e.itens.map((item) => <li>{item}</li>)}</ul></Tab>
 						))}
 					</Tabs>
-
-				{/* 	{data.hardSkills.map((e) => (
-						<div>
-							<h6 key={e.title}>{e.title}: </h6>
-							<div className="row">
-								{e.itens.map((item) => <div key={`${item}`}>&emsp;{item.toString()}</div>)}
-							</div>
-						</div>
-					))} */}
-
 					<br/>
 					<h4>Formação:</h4>
 					{data.formation.map((e) => <div key={`${e}`}>{e}</div>)}
