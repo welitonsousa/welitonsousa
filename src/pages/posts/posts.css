@@ -1,21 +1,19 @@
 .content{
-  text-align: center;
   display: flex;
   justify-content: center;
 }
 
-
-.content-post{ 
-  padding-top: 30px;
+.description{
+  color: rgb(56, 51, 51);
 }
+
 .content-post :hover{ 
   text-decoration: none;
 }
 
 .post-item{
-  text-align: left;
+  padding-top: 30px;
   width: 70%;
-  padding-left: 10px;
 }
 
 .description{
@@ -24,9 +22,8 @@
 
 .title{
   text-decoration: none;
-  padding: 10px;
+  padding: 20px 10px;
   background-color: rgb(49, 47, 47);
-  border-radius: 20px;
   color: white;
   display: flex;
   justify-content: space-between;

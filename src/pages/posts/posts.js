@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Api } from "../../services/connection";
-import { Image, Row, Col } from "react-bootstrap";
+import { Image, Row, Col, Card } from "react-bootstrap";
 import "./posts.css";
 
 const Posts = () => {
@@ -22,23 +22,25 @@ const Posts = () => {
   <div className="content min-size-heigth">
     <div className="post-item">
       {data.map((e)=> (
-        <div key={e.id} className="content-post">
-          <a href={`/post?id=${e.id}`}>
-            <Row className="title">
-              <div >{e.data.title}</div>
-              <div>{e.data.dateShow}</div>
-            </Row>
-          </a>
-          <div className="description">
-            <Row>
-              <Col md={2}>
-                <Image className="image" src={`${e.data.image}`} fluid />
-              </Col>
-            <div> {e.data.smallDescription}</div>
+        <Card className="card">
+          <div key={e.id} className="content-post">
+            <a href={`/post?id=${e.id}`}>
+              <div className="title">
+                <div >{e.data.title}</div>
+                <div>{e.data.dateShow}</div>
+              </div>
+            <div className="description">
+              <Row>
+                <Col md={2}>
+                  <Image className="image" src={`${e.data.image}`} fluid />
+                </Col>
+              <div> {e.data.smallDescription}</div>
 
-            </Row>
+              </Row>
+            </div>
+            </a>
           </div>
-        </div>
+        </Card>
       ))}  
     </div>
   </div>: <div className="min-size-heigth"/>

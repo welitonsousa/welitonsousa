@@ -22,9 +22,7 @@
   color: black !important;
 }
 .project-color{
-  text-decoration: none !important;
+  text-decoration: underline;
   color: dimgray;
-}
-a {
-  text-decoration: none !important;
+  text-decoration-color: dimgray;
 }
