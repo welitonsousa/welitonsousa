@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Api } from "../../services/connection";
 import { Image, Row, Col, Card } from "react-bootstrap";
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 import "./posts.css";
 
 const Posts = () => {
@@ -43,7 +45,7 @@ const Posts = () => {
         </Card>
       ))}  
     </div>
-  </div>: <div className="min-size-heigth"/>
+  </div>: <div className="min-size-heigth circular-indicator"><CircularProgress size={100}/></div>
   )
 }
 export {Posts}

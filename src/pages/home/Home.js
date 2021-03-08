@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Row, Image, Col, Tab, Tabs } from "react-bootstrap";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { Api } from "../../services/connection";
 import profile from '../../assets/images/weliton-profile.jpg'
 
@@ -62,7 +63,7 @@ const Home = () => {
 					{data.formation.map((e) => <div key={`${e}`}>{e}</div>)}
 				</Col>
 			</div>
-		</div> : <div className="min-size-heigth"/>
+		</div> : <div className="min-size-heigth circular-indicator"><CircularProgress size={100}/></div>
 	)
 }
 

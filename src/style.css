@@ -20,6 +20,12 @@ div > .nav-link{
   min-height: 100vh !important;
 }
 
+.circular-indicator{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 footer a{
   color: white;
   align-self: center;
