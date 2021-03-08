@@ -2,7 +2,7 @@ import React from 'react';
 import { Home } from './pages/home/Home';
 import { Posts } from './pages/posts/posts';
 import { Post} from './pages/post/post';
-
+import { NotFound} from './pages/notFound/notFound';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Navbar, Nav } from "react-bootstrap";
 import './style.css';
@@ -22,6 +22,7 @@ const Routes = () => {
 					<Route path="/" exact={true} component={Home} />
 					<Route path="/post" exact={true} component={Post} />
 					<Route path="/posts" exact={true} component={Posts} />
+					<Route component={NotFound} />
 				</Switch>
 			</ BrowserRouter>
 				<footer className="footer bg-dark distance-top my-row">
