@@ -29,14 +29,14 @@ const Posts = () => {
             <a href={`/post?id=${e.id}`}>
               <div className="title">
                 <div >{e.data.title}</div>
-                <div>{e.data.dateShow}</div>
+                <div className="date">{e.data.dateShow}</div>
               </div>
             <div className="description">
               <Row>
                 <Col md={2}>
                   <Image className="image" src={`${e.data.image}`} fluid />
                 </Col>
-              <div> {e.data.smallDescription}</div>
+              <div className="smallDescription"> {e.data.smallDescription}</div>
 
               </Row>
             </div>
