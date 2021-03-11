@@ -35,7 +35,13 @@ const Post = () => {
       <h1>{data.title}</h1>
       <h3>{data.smallDescription}</h3>
       <div className="materia">
-        {data.fullDescription.map((e, index)=> <p key={`${index}`}>{e}</p>)}
+        {data.fullDescription.map((e, index)=> (
+        <div key={`${index}`}>
+          {e.title ? <h3>{e.title}</h3>: <div/>}
+          {e.description ? <p>{e.description}</p>: <div/>}
+          {e.image ? <Image src={`${e.image}`} fluid/> : <div/>}
+        </div>)
+        )}
       </div>
       {data.imageExample ?
       <Image className="image-example" src={`${data.imageExample}`} fluid/>: <div/>}
