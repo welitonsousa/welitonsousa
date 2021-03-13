@@ -15,9 +15,10 @@ const Post = () => {
   const getPost = async (idPost) => {
     try{
       const res = await Api.get(`/activities/post${idPost}`);
+      if (res.data.data.length === 0) history.replace('/not-found');
       setData(res.data.data);
     }catch(e){
-      console.log(e);
+      history.replace('/not-found');
     }
   } 
 
