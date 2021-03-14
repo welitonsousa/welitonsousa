@@ -22,21 +22,21 @@ const Posts = () => {
   return (
   data !== undefined ?
   <div className="content min-size-heigth">
-    <div className="post-item">
+    <div className="w-75 text-center">
       {data.map((e)=> (
-        <Card className="card">
+        <Card className="mt-4">
           <div key={e.id} className="content-post">
             <a href={`/post?id=${e.id}`}>
               <div className="title">
                 <div >{e.data.title}</div>
-                <div className="date">{e.data.dateShow}</div>
+                <div className="pl-3">{e.data.dateShow}</div>
               </div>
-            <div className="description">
+            <div className="text-dark m-3">
               <Row>
                 <Col md={2}>
                   <Image className="image" src={`${e.data.image}`} fluid />
                 </Col>
-              <div className="smallDescription"> {e.data.smallDescription}</div>
+                <div className="m-1 text-justify"> {e.data.smallDescription}</div>
 
               </Row>
             </div>

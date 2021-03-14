@@ -31,11 +31,11 @@ const Post = () => {
   return (
     data ?
   <div className="content min-size-heigth">
-    <div className="itens">
+    <div className="w-75 text-center mt-4">
       <Image className="image-title" src={`${data.image}`}/>
-      <h1>{data.title}</h1>
-      <h3>{data.smallDescription}</h3>
-      <div className="materia">
+      <h1 className="mt-3">{data.title}</h1>
+      <h3 className="mt-4">{data.smallDescription}</h3>
+      <div className="text-justify">
         {data.fullDescription.map((e, index)=> (
         <div key={`${index}`}>
           {e.title ? <h3>{e.title}</h3>: <div/>}
@@ -45,7 +45,7 @@ const Post = () => {
         )}
       </div>
       {data.imageExample ?
-      <Image className="image-example" src={`${data.imageExample}`} fluid/>: <div/>}
+      <Image className="image-example " src={`${data.imageExample}`} fluid/>: <div/>}
     
       <br/><br/><br/>
       <div>

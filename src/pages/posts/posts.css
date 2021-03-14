@@ -2,35 +2,9 @@
   display: flex;
   justify-content: center;
 }
-
-.description{
-  color: rgb(56, 51, 51);
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-}
-
-.date{
-  padding-left: 10px;
-}
-
-.smallDescription{
-  text-align: justify;
-}
-
 .content-post :hover{ 
   text-decoration: none;
 }
-
-.post-item{
-  width: 70%;
-  text-align: center;
-}
-
-.card{
-  margin-top: 30px;
-}
-
 .title{
   text-decoration: none;
   padding: 20px 10px;
@@ -40,7 +14,6 @@
   text-align: left;
   justify-content: space-between;
 }
-
 .image{
   max-height: 100px;
   border-radius: 10px;

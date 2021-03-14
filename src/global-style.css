@@ -1,10 +1,14 @@
-div > .nav-link{
-  color: white !important;
+.nav-bar{
+  position: sticky !important;
+  width: 100%;
+  z-index: 999; 
+  top: 0;
 }
-
 .footer{
-  justify-content: space-around;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  position: absolute;
+  width: 100%;
+  padding: 2% 10%;
 }
 .distance-bottom{
   padding-bottom: 2rem;
@@ -15,28 +19,21 @@ div > .nav-link{
 .my-row{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .min-size-heigth{
-  min-height: 100vh !important;
+  min-height: 60vh !important;
 }
-
 .circular-indicator{
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
 }
-
-footer a{
-  color: white;
-  align-self: center;
-  text-decoration: none !important;
-}
-footer h5 {
-  padding-left: 7%;
-  color: white;
+div > .nav-link{
+  color: white !important;
 }
 footer a :hover{
-  color: white;
+  color: rgb(41, 185, 113);
   text-decoration: none !important;
 }

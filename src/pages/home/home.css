@@ -1,28 +1,6 @@
-.profile-image{
-  width: 40%;
-  margin: 1rem;
-}
-
-.content-image-profile {
-  text-align: center;
-}
-
-.line{
-  background-color: gainsboro;
-  width: 2px;
-  min-height: 100vh;
-}
-
-.left{
-  align-self: flex-start;
-  padding-left: 4%;
-  text-align: left;
-}
-.nav-item{
-  color: black !important;
-}
 .project-color{
   text-decoration: underline;
-  color: dimgray;
-  text-decoration-color: dimgray;
+}
+.teste{
+  align-self: center;
 }

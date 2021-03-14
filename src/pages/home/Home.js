@@ -22,18 +22,18 @@ const Home = () => {
 	return (
 		data ?
 		<div>
-			<div className="my-row">
-				<Col xs={6} md={4} className="content-image-profile">
+			<div className="my-row justify-content-around">
+				<Col xs={6} md={4} className="text-center">
 					<div>
-						<Image src={profile} roundedCircle className="profile-image"/>
+						<Image src={profile} roundedCircle className="w-50 mt-4"/>
 						<h5>Weliton de Sousa Araujo</h5>
-						<div className="left">
+						<div className="text-justify ml-3">
 							<h3>Projetos: </h3>
 							{data.projects.map((e) =>(
 
 								<div>
 								<a key={e.title.toString()} href={e.link} target="blank">
-									<h5 className="project-color">{e.title}</h5>
+									<h5 className="text-dark font-weight-bolder project-color">{e.title}</h5>
 								</a>
 								<p>{e.description}</p>
 							</div>)) 
