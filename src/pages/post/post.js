@@ -17,7 +17,7 @@ const Post = () => {
 
   const getPost = async (idPost) => {
     try {
-      const res = await Api.get(`/activities/posst${idPost}`);
+      const res = await Api.get(`/activities/post${idPost}`);
       setData(res.data.data);
     } catch (e) {
       errorContext.setError(true);
