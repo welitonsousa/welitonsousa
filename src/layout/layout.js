@@ -9,9 +9,17 @@ const Layout = ({ children }) => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link className="text-light" href="/">Home</Nav.Link>
-          <Nav.Link className="text-light" href="/posts">Blog</Nav.Link>
-          <Nav.Link className="text-light" href="https://github.com/welitonsousa" target="blank">
+          <Nav.Link className="text-light" href="/">
+            Home
+          </Nav.Link>
+          <Nav.Link className="text-light" href="/posts">
+            Blog
+          </Nav.Link>
+          <Nav.Link
+            className="text-light"
+            href="https://github.com/welitonsousa"
+            target="blank"
+          >
             GitHub
           </Nav.Link>
         </Nav>
@@ -44,13 +52,15 @@ const Layout = ({ children }) => (
         />
       </Row>
 
-      <div className="text-center mt-3">
-        <h5>
-          <a className="text-light" href="mailto:welitonubuntu@gmail.com">
-            Email: welitonubuntu@gmail.com
-          </a>
-        </h5>
-        <h5>Cidade: Picos - PI</h5>
+      <div className="text-center mt-5">
+        <a className="text-light" href="mailto:welitonubuntu@gmail.com">
+          welitonubuntu@gmail.com
+        </a>
+
+        <p>
+          copyright 2021 &copy; Weliton de Sousa Araujo - Todos os Direitos
+          Reservados.
+        </p>
       </div>
     </footer>
   </div>
