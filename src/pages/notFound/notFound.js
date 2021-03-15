@@ -3,9 +3,9 @@ import { Image } from 'react-bootstrap';
 import imageNotFound from '../../assets/images/chorando.svg';
 
 const NotFound = () => (
-  <div className="min-size-heigth circular-indicator">
+  <div className="vh-100 circular-indicator">
     <div>
-      <Image style={{ maxWidth: '30%' }} src={imageNotFound} />
+      <Image className="w-25" src={imageNotFound} />
       <h2>Oh não, página não encontrada</h2>
     </div>
   </div>

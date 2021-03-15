@@ -1,20 +1,19 @@
 import CircularProgress from '@material-ui/core/CircularProgress';
-import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
 import { Image, Row, Col, Card } from 'react-bootstrap';
 import { Api } from '../../services/connection';
-
+import { ErrorContext } from '../../context/errorContext';
 import './posts.css';
 
 const Posts = () => {
+  const errorContext = useContext(ErrorContext);
   const [data, setData] = useState(undefined);
-  const history = useHistory();
   const getPosts = async () => {
     try {
       const res = await Api.get('/activities/posts');
       setData(res.data.data);
     } catch (e) {
-      history.replace('not-found');
+      errorContext.setError(true);
     }
   };
 
@@ -23,7 +22,7 @@ const Posts = () => {
   }, []);
 
   return data !== undefined ? (
-    <div className="content min-size-heigth">
+    <div className="content vh-100">
       <div className="w-75 text-center">
         {data.map((e) => (
           <Card className="mt-4">
@@ -39,7 +38,6 @@ const Posts = () => {
                       <Image className="image" src={`${e.data.image}`} fluid />
                     </Col>
                     <div className="m-1 text-justify">
-                      {' '}
                       {e.data.smallDescription}
                     </div>
                   </Row>
@@ -51,7 +49,7 @@ const Posts = () => {
       </div>
     </div>
   ) : (
-    <div className="min-size-heigth circular-indicator">
+    <div className="vh-100 circular-indicator">
       <CircularProgress size={100} />
     </div>
   );

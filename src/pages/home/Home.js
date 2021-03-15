@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Image, Col, Tab, Tabs, Row, Container } from 'react-bootstrap';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import React, { useEffect, useState, useContext } from 'react';
+import { Image, Col, Tab, Tabs, Row, Container } from 'react-bootstrap';
 import { Api } from '../../services/connection';
+import { ErrorContext } from '../../context/errorContext';
 import profile from '../../assets/images/weliton-profile.jpg';
 import './home.css';
 
 const Home = () => {
-  const history = useHistory();
+  const errorContext = useContext(ErrorContext);
   const [data, setData] = useState();
   const getData = async () => {
     try {
       const res = await Api.get('/profile');
       setData(res.data.data);
     } catch (e) {
-      history.replace('/not-found');
+      errorContext.setError(true);
     }
   };
   useEffect(() => {
@@ -86,7 +86,7 @@ const Home = () => {
       </Container>
     </div>
   ) : (
-    <div className="min-size-heigth circular-indicator">
+    <div className="vh-100 circular-indicator">
       <CircularProgress size={100} />
     </div>
   );

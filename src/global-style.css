@@ -10,9 +10,9 @@
   width: 100%;
   padding: 2% 10%;
 }
-.min-size-heigth{
+/* .min-size-heigth{
   min-height: 60vh !important;
-}
+} */
 .circular-indicator{
   display: flex;
   align-items: center;

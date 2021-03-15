@@ -1,12 +1,15 @@
 import CircularProgress from '@material-ui/core/CircularProgress';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
 import { Api } from '../../services/connection';
+import { ErrorContext } from '../../context/errorContext';
+import { NotFound } from '../notFound/notFound';
 
 import './post.css';
 
 const Post = () => {
+  const errorContext = useContext(ErrorContext);
   const history = useHistory();
   const useQuery = () => new URLSearchParams(useLocation().search);
   const id = useQuery().get('id');
@@ -14,11 +17,10 @@ const Post = () => {
 
   const getPost = async (idPost) => {
     try {
-      const res = await Api.get(`/activities/post${idPost}`);
-      if (res.data.data.length === 0) history.replace('/not-found');
+      const res = await Api.get(`/activities/posst${idPost}`);
       setData(res.data.data);
     } catch (e) {
-      history.replace('/not-found');
+      errorContext.setError(true);
     }
   };
 
@@ -28,49 +30,54 @@ const Post = () => {
     else getPost(idPost);
   }, []);
 
-  return data ? (
-    <div className="content min-size-heigth">
-      <div className="w-75 text-center mt-4">
-        <Image className="image-title" src={`${data.image}`} />
-        <h1 className="mt-3">{data.title}</h1>
-        <h3 className="mt-4">{data.smallDescription}</h3>
-        <div className="text-justify">
-          {data.fullDescription.map((e) => (
-            <div key={`${e.title}`}>
-              {e.title ? <h3>{e.title}</h3> : <div />}
-              {e.description ? <p>{e.description}</p> : <div />}
-              {e.image ? <Image src={`${e.image}`} fluid /> : <div />}
-            </div>
-          ))}
-        </div>
-        {data.imageExample ? (
-          <Image
-            className="image-example "
-            src={`${data.imageExample}`}
-            fluid
-          />
-        ) : (
-          <div />
-        )}
-
-        <br />
-        <br />
-        <br />
-        <div>
-          {data.repo !== {} ? (
-            <a target="blank" href={`${data.repo.link}`}>
-              {data.repo.title}
-            </a>
+  if (data) {
+    if (data.date === undefined) {
+      return <NotFound />;
+    }
+    return (
+      <div className="content">
+        <div className="w-75 text-center mt-4">
+          <Image className="image-title" src={`${data.image}`} />
+          <h1 className="mt-3">{data.title}</h1>
+          <h3 className="mt-4">{data.smallDescription}</h3>
+          <div className="text-justify">
+            {data.fullDescription.map((e) => (
+              <div key={`${e.title}`}>
+                {e.title ? <h3>{e.title}</h3> : <div />}
+                {e.description ? <p>{e.description}</p> : <div />}
+                {e.image ? <Image src={`${e.image}`} fluid /> : <div />}
+              </div>
+            ))}
+          </div>
+          {data.imageExample ? (
+            <Image
+              className="image-example "
+              src={`${data.imageExample}`}
+              fluid
+            />
           ) : (
             <div />
           )}
+
+          <div>
+            {data.repo !== {} ? (
+              <a target="blank" href={`${data.repo.link}`}>
+                {data.repo.title}
+              </a>
+            ) : (
+              <div />
+            )}
+          </div>
         </div>
       </div>
-    </div>
-  ) : (
-    <div className="min-size-heigth circular-indicator">
+    );
+  }
+
+  return (
+    <div className="vh-100 circular-indicator">
       <CircularProgress size={100} />
     </div>
   );
 };
+
 export { Post };
