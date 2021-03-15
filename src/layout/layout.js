@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Row } from 'react-bootstrap';
 import { GitHub, LinkedIn, SportsEsports, WhatsApp } from '@material-ui/icons';
 import { ItemFooter } from '../components/itensFooter';
 
@@ -9,9 +9,9 @@ const Layout = ({ children }) => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/posts">Blog</Nav.Link>
-          <Nav.Link href="https://github.com/welitonsousa" target="blank">
+          <Nav.Link className="text-light" href="/">Home</Nav.Link>
+          <Nav.Link className="text-light" href="/posts">Blog</Nav.Link>
+          <Nav.Link className="text-light" href="https://github.com/welitonsousa" target="blank">
             GitHub
           </Nav.Link>
         </Nav>
@@ -21,7 +21,7 @@ const Layout = ({ children }) => (
     {children}
 
     <footer className="bg-dark footer text-light">
-      <div className="my-row text-center">
+      <Row className="justify-content-around text-center">
         <ItemFooter
           Icon={GitHub}
           link="https://github.com/welitonsousa"
@@ -42,12 +42,14 @@ const Layout = ({ children }) => (
           link="https://steamcommunity.com/id/welitonuzumaki"
           title="Steam"
         />
-      </div>
+      </Row>
 
       <div className="text-center mt-3">
-        <a className="text-light" href="mailto:welitonubuntu@gmail.com">
-          <h5>Email: welitonubuntu@gmail.com</h5>
-        </a>
+        <h5>
+          <a className="text-light" href="mailto:welitonubuntu@gmail.com">
+            Email: welitonubuntu@gmail.com
+          </a>
+        </h5>
         <h5>Cidade: Picos - PI</h5>
       </div>
     </footer>

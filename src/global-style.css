@@ -10,17 +10,6 @@
   width: 100%;
   padding: 2% 10%;
 }
-.distance-bottom{
-  padding-bottom: 2rem;
-}
-.distance-top{
-  margin-top: 2rem;
-}
-.my-row{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .min-size-heigth{
   min-height: 60vh !important;
 }
@@ -30,10 +19,11 @@
   text-align: center;
   justify-content: center;
 }
-div > .nav-link{
-  color: white !important;
-}
-footer a :hover{
-  color: rgb(41, 185, 113);
+footer:hover a:hover{
+  color: rgb(41, 185, 113) !important;
   text-decoration: none !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');*{
+  font-family: 'Noto Sans', sans-serif;
 }
