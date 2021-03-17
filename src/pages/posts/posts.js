@@ -22,7 +22,7 @@ const Posts = () => {
   }, []);
 
   return data !== undefined ? (
-    <div className="content vh-100">
+    <div className="content">
       <div className="w-75 text-center">
         {data.map((e) => (
           <Card className="mt-4">
