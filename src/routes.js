@@ -13,7 +13,7 @@ const Routes = () => {
   const errorContext = useContext(ErrorContext);
   return (
     <Layout>
-      <BrowserRouter className="min-size-heigth">
+      <BrowserRouter>
         {errorContext.error ? (
           <ErrorScreen />
         ) : (

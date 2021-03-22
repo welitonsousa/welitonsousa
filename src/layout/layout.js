@@ -25,8 +25,9 @@ const Layout = ({ children }) => (
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-
-    {children}
+    <main className="min-vh-100">
+      {children}
+    </main>
 
     <footer className="bg-dark footer text-light">
       <Container>

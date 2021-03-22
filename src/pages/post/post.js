@@ -26,7 +26,7 @@ const Post = () => {
 
   useEffect(() => {
     const idPost = id;
-    if (!idPost) history.push('/');
+    if (!idPost) history.push('/posts');
     else getPost(idPost);
   }, []);
 
@@ -59,7 +59,7 @@ const Post = () => {
             <div />
           )}
 
-          <div>
+          <div className="mt-4">
             {data.repo !== {} ? (
               <a target="blank" href={`${data.repo.link}`}>
                 {data.repo.title}
@@ -74,7 +74,7 @@ const Post = () => {
   }
 
   return (
-    <div className="vh-100 circular-indicator">
+    <div className="min-vh-100 circular-indicator">
       <CircularProgress size={100} />
     </div>
   );

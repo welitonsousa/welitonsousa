@@ -49,7 +49,7 @@ const Posts = () => {
       </div>
     </div>
   ) : (
-    <div className="vh-100 circular-indicator">
+    <div className="min-vh-100 circular-indicator">
       <CircularProgress size={100} />
     </div>
   );
