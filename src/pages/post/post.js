@@ -1,7 +1,7 @@
 import CircularProgress from '@material-ui/core/CircularProgress';
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { Image } from 'react-bootstrap';
+import { Image, Container } from 'react-bootstrap';
 import { Api } from '../../services/connection';
 import { ErrorContext } from '../../context/errorContext';
 import { NotFound } from '../notFound/notFound';
@@ -35,15 +35,15 @@ const Post = () => {
       return <NotFound />;
     }
     return (
-      <div className="content">
-        <div className="w-75 text-center mt-4">
+      <Container>
+        <div className="text-center mt-4">
           <Image className="image-title" src={`${data.image}`} />
           <h1 className="mt-3">{data.title}</h1>
           <h3 className="mt-4">{data.smallDescription}</h3>
           <div className="text-justify">
             {data.fullDescription.map((e) => (
               <div key={`${e.title}`}>
-                {e.title ? <h3>{e.title}</h3> : <div />}
+                {e.title ? <h3 className="text-left">{e.title}</h3> : <div />}
                 {e.description ? <p>{e.description}</p> : <div />}
                 {e.image ? <Image src={`${e.image}`} fluid /> : <div />}
               </div>
@@ -69,7 +69,7 @@ const Post = () => {
             )}
           </div>
         </div>
-      </div>
+      </Container>
     );
   }
 

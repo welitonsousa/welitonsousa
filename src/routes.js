@@ -28,4 +28,5 @@ const Routes = () => {
     </Layout>
   );
 };
+
 export { Routes };

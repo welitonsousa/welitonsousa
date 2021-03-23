@@ -1,6 +1,6 @@
 import CircularProgress from '@material-ui/core/CircularProgress';
 import React, { useContext, useEffect, useState } from 'react';
-import { Image, Row, Col, Card } from 'react-bootstrap';
+import { Image, Row, Col, Card, Container } from 'react-bootstrap';
 import { Api } from '../../services/connection';
 import { ErrorContext } from '../../context/errorContext';
 import './posts.css';
@@ -22,8 +22,8 @@ const Posts = () => {
   }, []);
 
   return data !== undefined ? (
-    <div className="content">
-      <div className="w-75 text-center">
+    <Container>
+      <div className="text-center">
         {data.map((e) => (
           <Card className="mt-4">
             <div key={e.id} className="content-post">
@@ -47,7 +47,7 @@ const Posts = () => {
           </Card>
         ))}
       </div>
-    </div>
+    </Container>
   ) : (
     <div className="min-vh-100 circular-indicator">
       <CircularProgress size={100} />
