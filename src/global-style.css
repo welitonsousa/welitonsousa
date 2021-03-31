@@ -21,6 +21,46 @@
   text-align: center;
   justify-content: center;
 }
+
+.search-results {
+  position: absolute;
+  background: #fff;
+  width: 50%;
+  max-height: 240px;
+  overflow: auto;
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 3;
+  top: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.image-search-result{
+  max-width: 6rem;
+  align-self: center;
+}
+
+.result-search{
+  text-decoration: none !important;
+}
+.align-image-result-center{
+  align-self: center !important;
+}
+.icon-search{
+  cursor: pointer;
+  right: 50px;
+  position: relative;
+}
+.icon-close{
+  cursor: pointer;
+  right: 50px;
+  position: relative;
+}
+.icons{
+  padding-right: 60px !important;
+}
+
 footer:hover a:hover{
   color: rgb(41, 185, 113) !important;
   text-decoration: none !important;
@@ -28,4 +68,12 @@ footer:hover a:hover{
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');*{
   font-family: 'Noto Sans', sans-serif;
+}
+@media (min-width: 768px) {
+  .icon-search{
+    display: none;
+  }
+  .icon-close{
+    display: none;
+  }
 }
