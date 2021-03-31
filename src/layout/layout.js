@@ -86,13 +86,13 @@ const Layout = ({ children }) => {
               }}
             />
             <Search
-              className="icon-search"
+              className="icon-action-input"
               onClick={() => {
                 searchResults(searchKey);
               }}
             />
             <Close
-              className="icon-close"
+              className="icon-action-input"
               onClick={() => {
                 setResults([]);
                 setSearchKey('');
