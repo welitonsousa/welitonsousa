@@ -99,7 +99,7 @@ const Layout = ({ children }) => {
               }}
             />
             {results.length > 0 ? (
-              <ul className="search-results  pt-3">
+              <ul className="search-results pt-3">
                 {results.map((e) => (
                   <a
                     href={`/post?id=${e.id}`}

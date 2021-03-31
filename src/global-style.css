@@ -69,11 +69,11 @@ footer:hover a:hover{
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');*{
   font-family: 'Noto Sans', sans-serif;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .icon-search{
-    display: none;
+    display: none !important;
   }
   .icon-close{
-    display: none;
+    display: none !important;
   }
 }
