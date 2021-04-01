@@ -5,6 +5,7 @@ import { Posts } from './pages/posts/posts';
 import { Post } from './pages/post/post';
 import { NotFound } from './pages/notFound/notFound';
 import { ErrorScreen } from './pages/error/error';
+import { NewPost } from './pages/newPost/newPost';
 import { Layout } from './layout/layout';
 import { ErrorContext } from './context/errorContext';
 import './global-style.css';
@@ -21,6 +22,7 @@ const Routes = () => {
             <Route path="/" exact component={Home} />
             <Route path="/post" exact component={Post} />
             <Route path="/posts" exact component={Posts} />
+            <Route path="/new-post" exact component={NewPost} />
             <Route component={NotFound} />
           </Switch>
         )}

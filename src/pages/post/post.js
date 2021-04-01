@@ -2,6 +2,8 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Image, Container } from 'react-bootstrap';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { Api } from '../../services/connection';
 import { ErrorContext } from '../../context/errorContext';
 import { NotFound } from '../notFound/notFound';
@@ -23,7 +25,6 @@ const Post = () => {
       errorContext.setError(true);
     }
   };
-
   useEffect(() => {
     const idPost = id;
     if (!idPost) history.push('/posts');
@@ -45,7 +46,26 @@ const Post = () => {
               <div key={`${e.title}`}>
                 {e.title ? <h3 className="text-left">{e.title}</h3> : <div />}
                 {e.description ? <p>{e.description}</p> : <div />}
+                {e.code ? (
+                  <SyntaxHighlighter
+                    language={e.lang}
+                    style={dracula}
+                    showLineNumbers
+                    CircularProgress
+                  >
+                    {e.code}
+                  </SyntaxHighlighter>
+                ) : (
+                  <div />
+                )}
                 {e.image ? <Image src={`${e.image}`} fluid /> : <div />}
+                {e.link ? (
+                  <a target="blank" href={`${e.link}`}>
+                    {e.linkTitle}
+                  </a>
+                ) : (
+                  <div />
+                )}
               </div>
             ))}
           </div>
