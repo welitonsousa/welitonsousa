@@ -71,7 +71,7 @@ const Post = () => {
           </div>
           {data.imageExample ? (
             <Image
-              className="image-example "
+              className="image-example"
               src={`${data.imageExample}`}
               fluid
             />
