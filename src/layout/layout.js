@@ -6,10 +6,12 @@ import {
   Nav,
   Row,
   Container,
-  Form,
   FormControl,
   Image,
   Col,
+  Button,
+  InputGroup,
+  Form,
 } from 'react-bootstrap';
 import {
   GitHub,
@@ -57,75 +59,81 @@ const Layout = ({ children }) => {
               Blog
             </Nav.Link>
             <Nav.Link
-              className="text-light"
+              className="text-light pr-5"
               href="https://github.com/welitonsousa"
               target="blank"
             >
               GitHub
             </Nav.Link>
           </Nav>
-
           <Form
-            inline
-            className="ml-lg-5 w-100"
+            className="w-100"
             onSubmit={(key) => {
               key.preventDefault();
               searchResults(searchKey);
             }}
           >
-            <FormControl
-              type="text"
-              value={searchKey}
-              placeholder="Pesquisar"
-              className="icons"
-              onChange={(key) => {
-                if (key.target.value === '') {
-                  setResults([]);
-                }
-                setSearchKey(key.target.value);
-              }}
-            />
-            <Search
-              className="icon-action-input"
-              onClick={() => {
-                searchResults(searchKey);
-              }}
-            />
-            <Close
-              className="icon-action-input"
-              onClick={() => {
-                setResults([]);
-                setSearchKey('');
-              }}
-            />
-            {results.length > 0 ? (
-              <ul className="search-results pt-3">
-                {results.map((e) => (
-                  <a
-                    href={`/post?id=${e.id}`}
-                    className="text-dark result-search"
-                    key={e.id}
-                  >
-                    <Container className="mb-3">
-                      <Row className="align-items-center">
-                        <Col md={2}>
-                          <Image src={e.data.image} className="w-100" />
-                        </Col>
-                        <Col md={8}>
-                          <div>
-                            <h4>{e.data.title}</h4>
-                            <p>{e.data.smallDescription}</p>
-                          </div>
-                        </Col>
-                      </Row>
-                    </Container>
-                  </a>
-                ))}
-              </ul>
-            ) : (
-              <div />
-            )}
+            <InputGroup>
+              <FormControl
+                placeholder="Pesquisar"
+                value={searchKey}
+                onChange={(key) => {
+                  if (key.target.value === '') {
+                    setResults([]);
+                  }
+                  setSearchKey(key.target.value);
+                }}
+                on
+              />
+              <InputGroup.Append>
+                <Button
+                  variant="outline-secondary"
+                  onClick={() => {
+                    searchResults(searchKey);
+                  }}
+                >
+                  <Search />
+                </Button>
+                <Button
+                  variant="outline-secondary"
+                  onClick={() => {
+                    setResults([]);
+                    setSearchKey('');
+                  }}
+                >
+                  <Close />
+                </Button>
+              </InputGroup.Append>
+              {results.length > 0 ? (
+                <ul className="search-results pt-3">
+                  {results.map((e) => (
+                    <a
+                      href={`/post?id=${e.id}`}
+                      className="text-dark result-search"
+                      key={e.id}
+                    >
+                      <Container className="mb-3">
+                        <Row className="align-items-center">
+                          <Col md={2}>
+                            <Image src={e.data.image} className="w-100" />
+                          </Col>
+                          <Col md={8}>
+                            <div>
+                              <h4>{e.data.title}</h4>
+                              <p>{e.data.smallDescription}</p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </a>
+                  ))}
+                </ul>
+              ) : (
+                <div />
+              )}
+            </InputGroup>
           </Form>
+          <div className="ml-lg-5 w-100" />
         </Navbar.Collapse>
       </Navbar>
       <main className="min-vh-100">{children}</main>

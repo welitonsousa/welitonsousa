@@ -33,6 +33,7 @@
   border-bottom-right-radius: 5px;
   z-index: 3;
   top: 100%;
+  width: 100%;
   -webkit-overflow-scrolling: touch;
   margin-right: 5%;
   padding-left: 0;
@@ -48,14 +49,6 @@
 .align-image-result-center{
   align-self: center !important;
 }
-.icon-action-input{
-  cursor: pointer;
-  right: 50px;
-  position: relative;
-}
-.icons{
-  padding-right: 60px !important;
-}
 
 footer:hover a:hover{
   color: rgb(41, 185, 113) !important;
@@ -64,9 +57,4 @@ footer:hover a:hover{
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');*{
   font-family: 'Noto Sans', sans-serif;
-}
-@media (max-width: 768px) {
-  .icon-action-input{
-    display: none !important;
-  }
 }
