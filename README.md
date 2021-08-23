@@ -1,6 +1,6 @@
 ## Olá, meu nome é Weliton Sousa 👋
 
-####Aluno da Universidade Federal do Piauí - UFPI <br>
+#### Aluno da Universidade Federal do Piauí - UFPI <br>
 Desenvolvedor de software de Mobile 📱
 
 Apaixonado por programação e facinado descobrir novas tecnologias. Atualmente estou trabalhando com Flutter, e levo muito a sério o paradigma de orientação a objetos
