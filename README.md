@@ -1,20 +1,16 @@
 ## Olá, meu nome é Weliton Sousa 👋
 
-🧑‍  &nbsp; Aluno da Universidade Federal do Piauí - UFPI <br>
-&nbsp; Sou de Picos - PI, Brasil
+####Aluno da Universidade Federal do Piauí - UFPI <br>
+Desenvolvedor de software de Mobile 📱
 
-### Com que estou trabalhando: 
-🤦‍♂️  &nbsp; Atualmente estou disponível para novas vagas<br>
-💻  &nbsp; Dev JR Mobile e Web<br>
-🏍  &nbsp; Clean code e padrões de projeto são levados a serio por mim<br>
+Apaixonado por programação e facinado descobrir novas tecnologias. Atualmente estou trabalhando com Flutter, e levo muito a sério o paradigma de orientação a objetos
 
-### 📫 Onde você pode me encontrar na web? 🌎
-[![Linkedin: Weliton Sousa](https://img.shields.io/badge/-Linkedin:%20Weliton%20Sousa-blue)](https://www.linkedin.com/in/weliton-sousa-330a29190/)
-[![website: Weliton Sousa](https://img.shields.io/badge/-Web%20site-green)](https://welitonsousa.vercel.app)<br>
-welitonubuntu@gmail.com
+### Onde você pode me encontrar na web? 🌎
+linkedin: [welitonsousa](https://www.linkedin.com/in/weliton-sousa-330a29190/)<br>
+website: [https://welitonsousa.vercel.app](https://welitonsousa.vercel.app)<br>
+email: welitonubuntu@gmail.com<br>
 
-
-## ⚡ FrameWorks
+## FrameWorks
 
 Aqui estão alguns frameworks com que mais trabalho:
 
@@ -25,7 +21,7 @@ Aqui estão alguns frameworks com que mais trabalho:
 ![NestJS](https://img.shields.io/badge/-NestJS-red)
 ![NodeJS](https://img.shields.io/badge/-NodeJS-gree)
 
-## ⚡ Linguagens
+## Linguagens
 
 Aqui estão alguas linguagens de programação e marcação com que mais trabalho:
 
