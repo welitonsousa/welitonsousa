@@ -1,7 +1,7 @@
 ## Olá, meu nome é Weliton Sousa 👋
 
 #### Aluno da Universidade Federal do Piauí - UFPI <br>
-Desenvolvedor de software de Mobile 📱
+Desenvolvedor de software de Mobile
 
 Apaixonado por programação e facinado descobrir novas tecnologias. Atualmente estou trabalhando com Flutter, e levo muito a sério o paradigma de orientação a objetos
 
@@ -10,22 +10,36 @@ linkedin: [welitonsousa](https://www.linkedin.com/in/weliton-sousa-330a29190/)<b
 website: [https://welitonsousa.vercel.app](https://welitonsousa.vercel.app)<br>
 email: welitonubuntu@gmail.com<br>
 
-## FrameWorks
+<table border="0" style="border-radius: 10px">
+ <tr>
+    <td><b style="font-size:30px">Frameworks</b></td>
+    <td><b style="font-size:30px">Linguagens</b></td>
+ </tr>
+ <tr>
+    <td width="500px">
+     <img src="https://img.shields.io/badge/-Flutter-blue"><img/>
+     <img src="https://img.shields.io/badge/-React%20Native-green"><img/>
+     <img src="https://img.shields.io/badge/-React-yellowgreen"><img/>
+     <img src="https://img.shields.io/badge/-VueJS-gree"><img/>
+     <img src="https://img.shields.io/badge/-NestJS-red"><img/>
+     <img src="https://img.shields.io/badge/-NodeJS-gree"><img/>
+   </td>
+    <td width="500px">
+      <img src="https://img.shields.io/badge/-Dart-blue"><img/>
+      <img src="https://img.shields.io/badge/-JavaScript-yellow"><img/>
+      <img src="https://img.shields.io/badge/-Python-green"><img/>
+      <img src="https://img.shields.io/badge/-C-red"><img/>
+    </td>
+ </tr>
+</table>
 
-Aqui estão alguns frameworks com que mais trabalho:
-
-![Flutter](https://img.shields.io/badge/-Flutter-blue)
-![React Native](https://img.shields.io/badge/-React%20Native-green)
-![React](https://img.shields.io/badge/-React-yellowgreen)
-![VueJS](https://img.shields.io/badge/-VueJS-gree)
-![NestJS](https://img.shields.io/badge/-NestJS-red)
-![NodeJS](https://img.shields.io/badge/-NodeJS-gree)
-
-## Linguagens
-
-Aqui estão alguas linguagens de programação e marcação com que mais trabalho:
-
-![Dart](https://img.shields.io/badge/-Dart-blue)
-![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
-![Python](https://img.shields.io/badge/-Python-green)
-![C](https://img.shields.io/badge/-C-red)
+<table border="0">
+ <tr>
+    <td width="500px">
+      <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=welitonsousa&hide=html&layout=compact" />
+   </td>
+    <td width="500px">
+      <img width="100%" align="center" height="200px" src="src/assets/dev.png" />
+    </td>
+ </tr>
+</table>
