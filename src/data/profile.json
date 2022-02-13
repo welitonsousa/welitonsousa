@@ -3,10 +3,28 @@
   "name": "Weliton Sousa",
   "projects": [
     {
-      "name": "Nome do projeto",
-      "description": "Descrição do projeto",
-      "image": "",
-      "primary_color": ""
+      "name": "Fastzap",
+      "description": "Site a aplicativo de chat online que consome a api do Whatsapp para envio e recebimento de mensagens em tempo real. O foco deste app é oferecer uma solução boa para empresas que trabalham com SAC (Sistema de Atendimento ao Cliente) via Whatsapp.",
+      "image": "https://www.fastzap.chat/wp-content/uploads/2021/10/image002-768x199.png",
+      "link": "https://play.google.com/store/apps/details?id=app.fastzap.chat"
+    },
+    {
+      "name": "CardLife",
+      "description": "Aplicativo de carteira digital, focada no âmbito hospitalar, para agendamentos e pagamentos de consultas.",
+      "image": "https://cardlife.com.br/wp-content/uploads/2021/01/brand.png",
+      "link": "https://cardlife.com.br/"
+    },
+    {
+      "name": "Festit",
+      "description": "Aplicativo com foco na gestão e planejamento de festas, com a possibilidade de criar convites, calcular gastos, gerenciar convidados entre outras funcionalidades.",
+      "image": "https://play-lh.googleusercontent.com/1hY4Shn5lr9huSOkuCN3RfZghyQeKzpXz6cXEV8rCGbuiTb6ZVoIh89kyUDyCwSuPw=w720-h310-rw",
+      "link": "https://play.google.com/store/apps/details?id=br.com.festit.app"
+    },
+    {
+      "name": "Vakinha Burguer",
+      "description": "Aplicativo de delivery desenvolvido para aprendizado de arquitetura limpa junto com o GETX, um poderoso sistema de injeção de dependências",
+      "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
+      "link": "https://github.com/welitonsousa/vakinha_burguer  "
     }
   ]
 }
