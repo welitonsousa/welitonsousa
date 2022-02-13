@@ -1,27 +1,43 @@
 {
   "image": "https://avatars.githubusercontent.com/u/64853142?v=4",
   "name": "Weliton Sousa",
+  "description":[
+    "Olá, meu nome é Weliton Sousa 👋",
+    "Sou aluno da universidade federal do Piauí e Desenvolvedor de software (sites e aplicativos)",
+    "Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter e VueJs em um chat online, e levo muito a sério o paradigma de orientação a objetos"
+  ],
+  "tecs": [
+    {"name": "Flutter", "bg": "#0969da"},
+    {"name": "VueJS", "bg": "#2da44e"},
+    {"name": "Node", "bg": "#2da44e"},
+    {"name": "ReactJS", "bg": "#003d16"},
+    {"name": "React Native", "bg": "#bf8700"}
+  ],
   "projects": [
     {
       "name": "Fastzap",
+      "small": "Site e app de chat online",
       "description": "Site a aplicativo de chat online que consome a api do Whatsapp para envio e recebimento de mensagens em tempo real. O foco deste app é oferecer uma solução boa para empresas que trabalham com SAC (Sistema de Atendimento ao Cliente) via Whatsapp.",
       "image": "https://www.fastzap.chat/wp-content/uploads/2021/10/image002-768x199.png",
       "link": "https://play.google.com/store/apps/details?id=app.fastzap.chat"
     },
     {
       "name": "CardLife",
+      "small": "App de carteira digital",
       "description": "Aplicativo de carteira digital, focada no âmbito hospitalar, para agendamentos e pagamentos de consultas.",
       "image": "https://cardlife.com.br/wp-content/uploads/2021/01/brand.png",
       "link": "https://cardlife.com.br/"
     },
     {
       "name": "Festit",
+      "small": "App de planejamentos e ornamentações de estas",
       "description": "Aplicativo com foco na gestão e planejamento de festas, com a possibilidade de criar convites, calcular gastos, gerenciar convidados entre outras funcionalidades.",
       "image": "https://play-lh.googleusercontent.com/1hY4Shn5lr9huSOkuCN3RfZghyQeKzpXz6cXEV8rCGbuiTb6ZVoIh89kyUDyCwSuPw=w720-h310-rw",
       "link": "https://play.google.com/store/apps/details?id=br.com.festit.app"
     },
     {
       "name": "Vakinha Burguer",
+      "small": "App de delivery",
       "description": "Aplicativo de delivery desenvolvido para aprendizado de arquitetura limpa junto com o GETX, um poderoso sistema de injeção de dependências",
       "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
       "link": "https://github.com/welitonsousa/vakinha_burguer  "
