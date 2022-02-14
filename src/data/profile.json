@@ -1,6 +1,23 @@
 {
   "image": "https://avatars.githubusercontent.com/u/64853142?v=4",
   "name": "Weliton Sousa",
+  "social": [
+    {
+      "name": "Telegram",
+      "link": "https://t.me/welitonsousa",
+      "bg": "#0969da"
+    },
+    {
+      "name": "WhatsApp",
+      "link": "http://my-whats.com/4a9120d60d",
+      "bg": "#0969da"
+    },
+    {
+      "name": "Email",
+      "link": "welitonubuntu@gmail.com",
+      "bg": "red"
+    }
+  ],
   "description":[
     "Olá, meu nome é Weliton Sousa 👋",
     "Sou aluno da universidade federal do Piauí e Desenvolvedor de software (sites e aplicativos)",
