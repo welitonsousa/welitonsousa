@@ -90,7 +90,7 @@
 
 <script>
 const url =
-  "https://raw.githubusercontent.com/welitonsousa/welitonsousa/master/src/data/profile.json";
+  "https://raw.githubusercontent.com/welitonsousa/welitonsousa/master/profile.json";
 import axios from "axios";
 import Divider from "src/components/divider.vue";
 import ProjectModal from "src/pages/home/ModalProject.vue";

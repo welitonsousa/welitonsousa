@@ -1,11 +1,13 @@
 ## Olá, meu nome é Weliton Sousa 👋
 
 #### Aluno da Universidade Federal do Piauí - UFPI <br>
+
 Desenvolvedor de software Mobile
 
 Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter, e levo muito a sério o paradigma de orientação a objetos
 
 ### Onde você pode me encontrar na web? 🌎
+
 linkedin: [welitonsousa](https://www.linkedin.com/in/weliton-sousa-330a29190/)<br>
 website: [https://welitonsousa.vercel.app](https://welitonsousa.vercel.app)<br>
 email: welitonubuntu@gmail.com<br>
@@ -39,7 +41,7 @@ email: welitonubuntu@gmail.com<br>
       <img width="100%" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=welitonsousa&hide=html&layout=compact" />
    </td>
     <td width="500px">
-      <img width="100%" align="center" height="200px" src="src/assets/dev.png" />
+      <img width="100%" align="center" height="200px" src="https://github.com/welitonsousa/welitonsousa/blob/last-layout/src/assets/dev.png?raw=true" />
     </td>
  </tr>
 </table>

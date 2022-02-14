@@ -16,19 +16,44 @@
       "name": "Email",
       "link": "welitonubuntu@gmail.com",
       "bg": "red"
+    },
+    {
+      "name": "Github",
+      "link": "https://github.com/welitonsousa",
+      "bg": "#57606a"
+    },
+    {
+      "name": "Linkedin",
+      "link": "https://www.linkedin.com/in/weliton-sousa-330a29190/",
+      "bg": "#0073b1"
     }
   ],
-  "description":[
+  "description": [
     "Olá, meu nome é Weliton Sousa 👋",
     "Sou aluno da universidade federal do Piauí e Desenvolvedor de software (sites e aplicativos)",
     "Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter e VueJs em um chat online, e levo muito a sério o paradigma de orientação a objetos"
   ],
   "tecs": [
-    {"name": "Flutter", "bg": "#0969da"},
-    {"name": "VueJS", "bg": "#2da44e"},
-    {"name": "Node", "bg": "#2da44e"},
-    {"name": "ReactJS", "bg": "#003d16"},
-    {"name": "React Native", "bg": "#bf8700"}
+    {
+      "name": "Flutter",
+      "bg": "#0969da"
+    },
+    {
+      "name": "VueJS",
+      "bg": "#2da44e"
+    },
+    {
+      "name": "Node",
+      "bg": "#2da44e"
+    },
+    {
+      "name": "ReactJS",
+      "bg": "#003d16"
+    },
+    {
+      "name": "React Native",
+      "bg": "#bf8700"
+    }
   ],
   "projects": [
     {
