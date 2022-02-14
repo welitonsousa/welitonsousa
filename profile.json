@@ -5,12 +5,12 @@
     {
       "name": "Telegram",
       "link": "https://t.me/welitonsousa",
-      "bg": "blue"
+      "bg": "#1d98dc"
     },
     {
       "name": "WhatsApp",
       "link": "http://my-whats.com/4a9120d60d",
-      "bg": "green"
+      "bg": "#00a884"
     },
     {
       "name": "Email",
@@ -62,7 +62,13 @@
       "description": "Site a aplicativo de chat online que consome a api do Whatsapp para envio e recebimento de mensagens em tempo real. O foco deste app é oferecer uma solução boa para empresas que trabalham com SAC (Sistema de Atendimento ao Cliente) via Whatsapp.",
       "image": "https://www.fastzap.chat/wp-content/uploads/2021/10/image002-768x199.png",
       "link": "https://play.google.com/store/apps/details?id=app.fastzap.chat",
-      "screenshots": []
+      "screenshots": [
+        "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/login.png",
+        "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/drawer.png",
+        "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/chat.png",
+        "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/chat_opt.png",
+        "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/drawer.png"
+      ]
     },
     {
       "name": "CardLife",
@@ -78,7 +84,9 @@
       "description": "Aplicativo com foco na gestão e planejamento de festas, com a possibilidade de criar convites, calcular gastos, gerenciar convidados entre outras funcionalidades.",
       "image": "https://static.wixstatic.com/media/feafcb_4354ec3d4e584aafa9ad0e3e022f26a3~mv2.png/v1/fill/w_140,h_45,al_c,q_85,usm_0.66_1.00_0.01/Logo-Topo-img-3875382-20210306223340.webp",
       "link": "https://play.google.com/store/apps/details?id=br.com.festit.app",
-      "screenshots": []
+      "screenshots": [
+        "https://play-lh.googleusercontent.com/tW2ujiWk3jVLgjb2sEtUkp_lUXPhY44SyWsPpOBjpqwh_r9OxGs3VuY9H1jkCU6uKNju=w2880-h1422-rw"
+      ]
     },
     {
       "name": "Vakinha Burguer",
