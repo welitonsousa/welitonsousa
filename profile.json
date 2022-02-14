@@ -71,14 +71,6 @@
       ]
     },
     {
-      "name": "CardLife",
-      "small": "App de carteira digital",
-      "description": "Aplicativo de carteira digital, focada no âmbito hospitalar, para agendamentos e pagamentos de consultas.",
-      "image": "https://cardlife.com.br/wp-content/uploads/2021/01/brand.png",
-      "link": "https://cardlife.com.br/",
-      "screenshots": []
-    },
-    {
       "name": "Festit",
       "small": "App de planejamentos e ornamentações de festas",
       "description": "Aplicativo com foco na gestão e planejamento de festas, com a possibilidade de criar convites, calcular gastos, gerenciar convidados entre outras funcionalidades.",
@@ -100,6 +92,24 @@
         "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/product.png",
         "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/confirmation.png"
       ]
+    },
+    {
+      "name": "Crypto Currency",
+      "small": "App de cripto moedas",
+      "description": "Aplicativo capaz de listar as cripto moedas mais valorizadas no mercado. Este app foi desenvolvido utilizando GETX",
+      "image": "https://github.com/welitonsousa/cripto_currency/blob/main/assets/logo.png?raw=true",
+      "link": "https://github.com/welitonsousa/cripto_currency",
+      "screenshots": [
+        "https://github.com/welitonsousa/cripto_currency/blob/main/assets/screenshots/home.png?raw=true"
+      ]
+    },
+    {
+      "name": "CardLife",
+      "small": "App de carteira digital",
+      "description": "Aplicativo de carteira digital, focada no âmbito hospitalar, para agendamentos e pagamentos de consultas.",
+      "image": "https://cardlife.com.br/wp-content/uploads/2021/01/brand.png",
+      "link": "https://cardlife.com.br/",
+      "screenshots": []
     }
   ]
 }
