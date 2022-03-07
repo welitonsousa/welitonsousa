@@ -94,6 +94,21 @@
       ]
     },
     {
+      "name": "Movie APP",
+      "small": "Aplicativo de filmes",
+      "description": "Movie APP é um aplicativo que soluciona o problema de quem não consegue encontrar nada para assistir.",
+      "image": "https://github.com/welitonsousa/movie_app/raw/main/assets/images/logo-dark.png",
+      "link": "https://github.com/welitonsousa/movie_app",
+      "screenshots": [
+        "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/home.png",
+        "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/detail.png",
+        "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/similares.png",
+        "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/genre.png",
+        "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/favorites.png",
+        "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/search.png"
+      ]
+    },
+    {
       "name": "Crypto Currency",
       "small": "App de cripto moedas",
       "description": "Aplicativo capaz de listar as cripto moedas mais valorizadas no mercado. Este app foi desenvolvido utilizando GETX",
