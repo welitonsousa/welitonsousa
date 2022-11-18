@@ -7,9 +7,18 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  nextConfigDir: './',
-  staticDir: './../static',
-  // serverless-nextjs:
+  distDir: "_next",
+  generateBuildId: async () => {
+    if (process.env.BUILD_ID) {
+      return process.env.BUILD_ID;
+    } else {
+      return `${new Date().getTime()}`;
+    }
+  },
+  // basePath: './',
+  // assetPrefix: './next',
+  
+ 
 }
 
 module.exports = nextConfig
