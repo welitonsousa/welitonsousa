@@ -34,6 +34,7 @@ export default function Home(props: Props) {
       <Head>
         <title>Weliton Sousa</title>
         <meta name="description" content="Weliton Sousa - portfolio" />
+        <meta property="og:image" content="/logo.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='p-10 max-w-5xl '>
@@ -48,7 +49,7 @@ export default function Home(props: Props) {
             />
             <h1 className='text-center text-[30px]'>Weliton Sousa</h1>
             <div className='text-center leading-6'>
-              <h2>Olá, meu nome é Weliton Sousa 👋</h2><br />
+              <h2>Olá, meu nome é Weliton de Sousa Araújo👋</h2><br />
               <p> Sou aluno da universidade federal do Piauí e Desenvolvedor de software (sites e aplicativos)</p><br />
               <p>Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter e VueJs em um chat online, e levo muito a sério o paradigma de orientação a objetos</p>
             </div>
@@ -100,7 +101,7 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://github.com/welitonsousa/welitonsousa/master/profile.json?ra')
+  const res = await fetch('https://raw.githubusercontent.com/welitonsousa/welitonsousa/master/profile.json')
   const data = await res.json()
 
   return {
