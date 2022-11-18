@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
-// const withTM = require("next-transpile-modules")(["ui"]);
 
 const nextConfig = {
   swcMinify: true,
-  dir: "src",
-  // outDir: "./build",
+  // dir: "src",
   images: {
     unoptimized: true,
   },
