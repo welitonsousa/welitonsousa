@@ -7,11 +7,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  "public": true,
-    "builds": [
-        { "src": "package.json", "use": "@now/next" },
-        { "src": "static/css/style.css", "use": "@now/static" }
-    ]
+  nextConfigDir: './',
+  staticDir: './../static',
+  // serverless-nextjs:
 }
 
 module.exports = nextConfig
