@@ -64,7 +64,6 @@ export default function ProjectPage({ project }: Props) {
                 height={1000}
                 key={index}
                 alt={`captura de imagem - ${index + 1}`}
-                className={`row-span-${e.proportion}`}
               />
             ))}
           </section>

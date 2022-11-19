@@ -121,7 +121,7 @@ export const profileData: HomeProps = {
       "image": "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/images/nlw-green.png?raw=true",
       "link": "https://github.com/welitonsousa/nlw-copa/",
       "screenshots": [
-        {proportion: '3', link: "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/screenshots/home.png?raw=true"},
+        // {proportion: '3', link: "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/screenshots/home.png?raw=true"},
         {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/signin.png?raw=true"},
         {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/new_pool.png?raw=true"},
         {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/list_pool.png?raw=true"},
