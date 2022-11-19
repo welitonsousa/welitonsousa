@@ -101,7 +101,7 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://raw.githubusercontent.com/welitonsousa/welitonsousa/master/profile.json')
+  const res = await fetch('https://raw.githubusercontent.com/welitonsousa/welitonsousa/main/profile.json')
   const data = await res.json()
 
   return {

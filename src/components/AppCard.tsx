@@ -9,8 +9,8 @@ interface Props {
 export default function AppCard(props: Props) {
   return <div 
   onClick={props.onClick}
-  style={{ background: props.backgroundColor }}
+  style={{ backgroundColor: props.backgroundColor }}
   className="rounded-lg py-4 w-full text-center cursor-pointer">
-    {props.title}
+    <span className="text-[20px]">{props.title}</span>
   </div>
 }

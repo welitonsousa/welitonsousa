@@ -43,6 +43,10 @@
       "bg": "#2da44e"
     },
     {
+      "name": "NextJS",
+      "bg": "#161514"
+    },
+    {
       "name": "Node",
       "bg": "#2da44e"
     },
@@ -106,6 +110,25 @@
         "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/genre.png",
         "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/favorites.png",
         "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/search.png"
+      ]
+    },
+    {
+      "name": "NLW - World cup",
+      "small": "App, site e api de bolões com base nos jogos da copa do mundo de 2022",
+      "description": "O site foi totalmente construído utilizando o framework NextJS, enquanto o app foi construído com Flutter e a api com NodeJS e o prisma juntamente com um banco de dados PostgreSQL",
+      "image": "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/images/nlw-green.png?raw=true",
+      "link": "https://github.com/welitonsousa/nlw-copa/",
+      "screenshots": [
+        "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/images/nlw-green.png?raw=true",
+        "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/screenshots/home.png?raw=true",
+
+        "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/signin.png?raw=true",
+        "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/new_pool.png?raw=true",
+        "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/list_pool.png?raw=true",
+        "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/search_pool.png?raw=true",
+        "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/guesses_pool.png?raw=true",
+        "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/share_pool.png?raw=true"
+    
       ]
     },
     {
