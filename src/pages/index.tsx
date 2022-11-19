@@ -51,8 +51,9 @@ export default function Home(props: HomeProps) {
         <section className='divide-red-100 py-5'>
           <Divider title='Tecnologias' />
           <div className='grid max-sm:grid-cols-2 max-md:grid-cols-3 grid-cols-5 justify-items-center pt-4 gap-2'>
-            {props.tecs.flatMap((e) => (<AppCard
+            {props.tecs.flatMap((e, index) => (<AppCard
               title={e.name}
+              key={index}
               onClick={undefined}
               backgroundColor={e.bg}
             />)
@@ -63,8 +64,10 @@ export default function Home(props: HomeProps) {
         <section className='divide-red-100 py-5'>
           <Divider title='Projetos' />
           <div className='grid max-sm:grid-cols-1 max-md:grid-cols-2 grid-cols-3 justify-items-center pt-4 gap-2'>
-            {props.projects.flatMap((e) => (
-              <div onClick={() => goToProject(Formatters.replaceAll(e.name))} className="w-full">
+            {props.projects.flatMap((e, index) => (
+              <div
+                key={index}
+                onClick={() => goToProject(Formatters.replaceAll(e.name))} className="w-full">
                 <ProjectCard project={e} />
               </div>
             ))}

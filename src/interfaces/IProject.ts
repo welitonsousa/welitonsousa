@@ -4,5 +4,10 @@ export interface Project {
   image: string
   small: string
   link: string
-  screenshots: string[]
+  screenshots: ScreenShot[]
+}
+
+export interface ScreenShot {
+  link: string
+  proportion: '1' | '2' | '3'
 }
