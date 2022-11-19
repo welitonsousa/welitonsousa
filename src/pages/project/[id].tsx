@@ -5,10 +5,18 @@ import Footer from '../../components/core/footer'
 import AppHead from '../../components/core/head'
 import { Project } from '../../interfaces/IProject'
 import { Formatters } from '../../utils/formatters'
-
+import { useRouter } from 'next/router'
 interface Props { project: Project }
 
+
+
 export default function ProjectPage({ project }: Props) {
+  const router = useRouter()
+  
+  function goToHome() {
+    router.push('/')
+  }
+
   return (
     <div className='flex row justify-center'>
       <AppHead
@@ -18,7 +26,7 @@ export default function ProjectPage({ project }: Props) {
       />
       <div className='p-10 max-w-5xl '>
         <header className='flex justify-between items-center pb-4'>
-          <div className='flex items-center cursor-pointer h-12' onClick={() => window.open('/', '_self')}>
+          <div className='flex items-center cursor-pointer h-12' onClick={goToHome}>
             <Image src='/logo.png' width={48} height={48} alt="logotipo do site" />
             <h3 className='pl-4 max-sm:hidden text-[20px] overflow-x-scroll'>Weliton Sousa</h3>
           </div>
@@ -76,8 +84,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const id = context?.params?.id
-  const project = profileData.projects.find((e) => Formatters.replaceAll(e.name) === id)
+  const id = context?.params?.id as string | undefined
+  const project = profileData.projects.find((e) => Formatters.replaceAll(e.name) === Formatters.replaceAll(id  || ''))
   return {
     props: { project: project }
   }

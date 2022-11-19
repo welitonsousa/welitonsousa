@@ -9,6 +9,7 @@ import { profileData } from '../constants/profile'
 import AppHead from '../components/core/head'
 import Footer from '../components/core/footer'
 import { Formatters } from '../utils/formatters'
+import { useRouter } from 'next/router'
 
 
 export interface HomeProps {
@@ -19,11 +20,14 @@ export interface HomeProps {
   tecs: Tec[]
 }
 
-function goToProject(id: string) {
-  window.open('/project/' + id, '_self')
-}
 
 export default function Home(props: HomeProps) {
+  const router = useRouter()
+  function goToProject(id: string) {
+    router.push('/project/' + id)
+  }
+
+
   return (
     <div className='flex row justify-center'>
 
