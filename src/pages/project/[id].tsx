@@ -12,7 +12,7 @@ interface Props { project: Project }
 
 export default function ProjectPage({ project }: Props) {
   const router = useRouter()
-  
+
   function goToHome() {
     router.push('/')
   }
@@ -55,16 +55,21 @@ export default function ProjectPage({ project }: Props) {
             </a>
           </section>
 
+
           <section className='grid max-sm:grid-cols-1 grid-cols-3 gap-4 pt-10'>
             {project.screenshots.flatMap((e, index) => (
-              <Image
-                src={e.link}
-                width={1000}
-                height={1000}
+              <div
                 key={index}
-                alt={`captura de imagem - ${index + 1}`}
-                className={`col-span-${e.proportion} max-sm:col-span-1 `}
-              />
+                className={`col-span-${e.proportion} max-sm:col-span-1`}
+              >
+
+                <Image
+                  src={e.link}
+                  width={1000}
+                  height={1000}
+                  alt={`captura de imagem - ${index + 1}`}
+                />
+              </div>
             ))}
           </section>
         </main>
@@ -85,7 +90,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context?.params?.id as string | undefined
-  const project = profileData.projects.find((e) => Formatters.replaceAll(e.name) === Formatters.replaceAll(id  || ''))
+  const project = profileData.projects.find((e) => Formatters.replaceAll(e.name) === Formatters.replaceAll(id || ''))
   return {
     props: { project: project }
   }
