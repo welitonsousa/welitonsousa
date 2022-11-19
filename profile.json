@@ -5,17 +5,17 @@
     {
       "name": "Telegram",
       "link": "https://t.me/welitonsousa",
-      "bg": "#1d98dc"
+      "bg": "#0E5781"
     },
     {
       "name": "WhatsApp",
       "link": "http://my-whats.com/4a9120d60d",
-      "bg": "#00a884"
+      "bg": "#00614C"
     },
     {
       "name": "Email",
       "link": "welitonubuntu@gmail.com",
-      "bg": "red"
+      "bg": "#AC0101"
     },
     {
       "name": "Github",
@@ -40,7 +40,7 @@
     },
     {
       "name": "VueJS",
-      "bg": "#2da44e"
+      "bg": "#17451B"
     },
     {
       "name": "NextJS",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Node",
-      "bg": "#2da44e"
+      "bg": "#17451B"
     },
     {
       "name": "ReactJS",
@@ -56,7 +56,7 @@
     },
     {
       "name": "React Native",
-      "bg": "#bf8700"
+      "bg": "#705000"
     }
   ],
   "projects": [
