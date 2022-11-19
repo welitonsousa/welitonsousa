@@ -4,6 +4,7 @@ import { profileData } from '../../../profile'
 import Footer from '../../components/core/footer'
 import AppHead from '../../components/core/head'
 import { Project } from '../../interfaces/IProject'
+import { Formatters } from '../../utils/formatters'
 
 interface Props { project: Project }
 
@@ -34,11 +35,9 @@ export default function ProjectPage({ project }: Props) {
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-
-
   return {
     paths: profileData.projects.map((e) => {
-      return { params: { id: replaceAll(e.name.toLowerCase()) } }
+      return { params: { id: Formatters.replaceAll(e.name.toLowerCase()) } }
     }),
     fallback: false
   }
@@ -46,15 +45,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context?.params?.id
-  const project = profileData.projects.find((e) => replaceAll(e.name) === id)
-  // console.log(project, 'asd\n\n\n');
-
-
+  const project = profileData.projects.find((e) => Formatters.replaceAll(e.name) === id)
   return {
     props: { project: project }
   }
-}
-
-function replaceAll(sentence: string) {
-  return (sentence.replace(/[" "]/g, "-")).toLowerCase();
 }
