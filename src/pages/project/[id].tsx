@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
-import { profileData } from '../../../public/profile'
+import { profileData } from '../../constants/profile'
 import Footer from '../../components/core/footer'
 import AppHead from '../../components/core/head'
 import { Project } from '../../interfaces/IProject'

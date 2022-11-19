@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { profileData } from "../../../public/profile";
+import { profileData } from "../../constants/profile";
 import { Social } from "../../interfaces/ISocial";
 import AppCard from "../AppCard";
 import Divider from "../Divider";

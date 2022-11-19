@@ -1,4 +1,4 @@
-import { HomeProps } from "../src/pages";
+import { HomeProps } from "../pages";
 
 export const profileData: HomeProps = {
   "image": "https://avatars.githubusercontent.com/u/64853142?v=4",
