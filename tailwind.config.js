@@ -365,6 +365,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'Comfortaa',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',

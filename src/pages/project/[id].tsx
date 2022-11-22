@@ -51,7 +51,7 @@ export default function ProjectPage({ project }: Props) {
               (<p key={index} className='w-full py-2'>{e}</p>)
             )}
             <a href={project.link} target="_blank" rel="noreferrer">
-              <button className='bg-blue-400 rounded-full py-2 px-10 mt-6'>Acessar projeto</button>
+              <button className='button-primary'>Acessar projeto</button>
             </a>
           </section>
 

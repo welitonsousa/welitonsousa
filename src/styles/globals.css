@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer components {
+  .button-primary {
+    @apply bg-blue-400 rounded-full py-2 px-10 mt-6
+  }
+}
