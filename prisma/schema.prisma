@@ -11,14 +11,12 @@ datasource db {
 }
 
 model Post {
-  id        Int      @id @unique @default(autoincrement())
-  createdAt DateTime @default(now())
-
-  title        String  @unique
-  image        String
-  imageExample String?
-  externalLink String?
-
+  id               Int           @id @unique @default(autoincrement())
+  createdAt        DateTime      @default(now())
+  title            String        @unique
+  image            String
+  imageExample     String?
+  externalLink     String?
   smallDescription String
   descriptions     Description[] @relation
 }
@@ -30,6 +28,7 @@ model Description {
   title       String?
   image       String?
   description String?
+  link String?
 
   Post   Post? @relation(fields: [postId], references: [id])
   postId Int?

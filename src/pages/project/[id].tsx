@@ -6,6 +6,7 @@ import AppHead from '../../components/core/head'
 import { Project } from '../../interfaces/IProject'
 import { Formatters } from '../../utils/formatters'
 import { useRouter } from 'next/router'
+import Header from '../../components/core/header'
 interface Props { project: Project }
 
 
@@ -25,19 +26,9 @@ export default function ProjectPage({ project }: Props) {
         title={project.name}
       />
       <div className='p-10 max-w-5xl '>
-        <header className='flex justify-between items-center pb-4'>
-          <div className='flex items-center cursor-pointer h-12' onClick={goToHome}>
-            <Image src='/logo.png' width={48} height={48} alt="logotipo do site" />
-            <h3 className='pl-4 max-sm:hidden text-[20px] overflow-x-scroll'>Weliton Sousa</h3>
-          </div>
-
-
-          <h1 className='max-sm:text-[20px] h-12 text-[30px]'>{project.name}</h1>
-        </header>
-
+        <Header title={project.name} action={null}/>
         <main className='flex flex-col'>
           <hr className='py-4' />
-
           <Image
             src={project.image}
             width={500}
