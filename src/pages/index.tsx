@@ -26,6 +26,9 @@ export default function Home(props: HomeProps) {
   function goToProject(id: string) {
     router.push('/project/' + id)
   }
+  function goToPosts() {
+    router.push('/post')
+  }
 
 
   return (
@@ -48,6 +51,9 @@ export default function Home(props: HomeProps) {
               <h2>Olá, meu nome é Weliton de Sousa Araújo👋</h2><br />
               <p> Sou aluno da universidade federal do Piauí e Desenvolvedor de software (sites e aplicativos)</p><br />
               <p>Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter e VueJs em um chat online, e levo muito a sério o paradigma de orientação a objetos</p>
+            </div>
+            <div className='w-full'>
+              <button className='button-primary' onClick={goToPosts}>Veja os últimos posts</button>
             </div>
           </div>
         </main>

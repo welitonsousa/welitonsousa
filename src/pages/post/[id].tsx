@@ -22,12 +22,10 @@ export default function PostPage({ post }: Props) {
           alt={post.title}
           width={100}
           height={100}
-          className="rounded-t-md w-full h-80 object-cover"
+          className="rounded-md w-full h-80 object-cover"
         />
-        <h1 className='text-[2rem]'>{post.title}</h1>
-    
+        <h1 className='text-[2rem] pt-4'>{post.title}</h1>
         <h3 className='pb-2'>{post.smallDescription}</h3>
-
         <hr className='py-4' />
 
         {post.descriptions.map((desc, index) => (
