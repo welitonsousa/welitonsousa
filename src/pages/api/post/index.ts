@@ -15,10 +15,6 @@ const _get: NextApiHandler = async (_, res) => {
 
     return res.json({ posts })
   } catch (e) {
-    
-    console.log('================================================')
-    console.log(e);
-    console.log('================================================')
     return res.status(500).json({ message: "Erro ao retornar os posts" })
   }
 }

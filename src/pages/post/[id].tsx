@@ -81,25 +81,13 @@ export default function PostPage({ post }: Props) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const response = await fetch('http://localhost:3000/api/post')
   const data = await response.json()
-
-  console.log('================================================')
-  console.log(data);
-  console.log('================================================')
-  // const ids = (data.posts as IPost[]).flatMap((e) => ({
-  //   params: { id: e.title }
-  // }))
-  // console.log(ids)
-
-
+  const ids = (data.posts as IPost[]).flatMap((e) => ({
+    params: { id: e.title }
+  }))
 
   return {
     fallback: false,
-    // paths: ids,
-    paths: [
-      {
-        params: {id: 'titulo'}
-      }
-    ]
+    paths: ids,
   }
 }
 

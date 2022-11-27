@@ -30,11 +30,11 @@ export default function PostsPage({ posts }: Props) {
               alt={post.title}
               width={100}
               height={100}
-              className="rounded-t-md w-full h-52 object-cover"
+              className="rounded-t-md w-full h-1/2 object-cover"
             />
-            <div className="p-2">
+            <div className="h-1/2 p-2 overflow-hidden">
               <h4 className="text-[1.5rem]">{post.title}</h4>
-              <p>{post.smallDescription}</p>
+              <p>{post.smallDescription} {post.smallDescription} </p>
             </div>
           </div>
         })}
@@ -47,9 +47,6 @@ export async function getStaticProps() {
   const response = await fetch('http://localhost:3000/api/post')
   const data = await response.json()
 
-  console.log('================================================')
-  console.log(data);
-  console.log('================================================')
   return {
     props: {
       posts: [...data.posts]
