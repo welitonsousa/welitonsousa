@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-interface Props {title: string, content: string | null, image: string | null}
+interface Props {title: string, content: string | null, image: string | null | undefined}
 
 export default function AppHead(props: Props) {
   return <Head>

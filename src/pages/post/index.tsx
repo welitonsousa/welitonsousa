@@ -1,21 +1,16 @@
-import { Paper } from "@mui/material"
-import AppCard from "../../components/AppCard"
+
 import Head from "../../components/core/head"
 import Header from "../../components/core/header"
 import { IPost } from "../../interfaces/IPost"
-import { api } from "../../lib/axios"
 import Image from 'next/image'
 import { useRouter } from "next/router"
-import { Formatters } from "../../utils/formatters"
-
 interface Props {posts: IPost[]}
 
 export default function PostsPage({ posts }: Props) {
 
   const router = useRouter()
   function gotoPost(post: IPost) {
-    const url = Formatters.replaceAll(post.title)
-    router.push('/post/'+url)
+    router.push('/post/'+encodeURI(post.title))
   }
 
   return <div className="flex row justify-center">
@@ -48,10 +43,11 @@ export default function PostsPage({ posts }: Props) {
 }
 
 export async function getStaticProps() {
-  const response = await api.get('/api/post')
+  const response = await fetch('http://localhost:3000//api/post')
+  const data = await response.json()
   return {
     props: {
-      posts: response.data.posts
+      posts: data.posts
     }
   }
 }

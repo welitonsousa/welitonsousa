@@ -1,18 +1,24 @@
 import { NextApiHandler } from 'next'
-import { IPost } from '../../interfaces/IPost'
-import { prisma } from '../../lib/prisma'
+import { IPost } from '../../../interfaces/IPost'
+import { prisma } from '../../../lib/prisma'
 
 const _get: NextApiHandler = async (_, res) => {
   try {
     const response = await prisma.post.findMany({
-      include: { descriptions: true }
+      orderBy: {createdAt: 'desc'},
+      include: {
+        descriptions: {
+          orderBy: {
+            id: 'desc'
+          }
+        }
+      }
     })
 
-   
     return res.send({
       posts: response
     })
-    
+
   } catch (e) {
 
     return res.status(500).json({ message: "Erro ao retornar os posts" })
