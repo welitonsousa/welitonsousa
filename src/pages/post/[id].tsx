@@ -5,9 +5,9 @@ import { IPost } from '../../interfaces/IPost'
 import Image from 'next/image'
 import Footer from '../../components/core/footer'
 import Visibility from '../../components/visibility'
-import SyntaxHighlighter  from "react-syntax-highlighter";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from '../../styles/dracula'
-import { Formatters } from '../../utils/formatters'
+import { prisma } from '../../lib/prisma'
 interface Props { post: IPost }
 
 export default function PostPage({ post }: Props) {
@@ -79,18 +79,29 @@ export default function PostPage({ post }: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch('http://localhost:3000/api/post/')
+  const response = await fetch('http://localhost:3000/api/post')
   const data = await response.json()
-  const ids = data.posts.map((e: IPost) => ({
-    params: { id: e.title }
-  }))
+
+  console.log('================================================')
+  console.log(data);
+  console.log('================================================')
+  // const ids = (data.posts as IPost[]).flatMap((e) => ({
+  //   params: { id: e.title }
+  // }))
+  // console.log(ids)
+
+
 
   return {
     fallback: false,
-    paths: ids,
+    // paths: ids,
+    paths: [
+      {
+        params: {id: 'titulo'}
+      }
+    ]
   }
 }
-
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id

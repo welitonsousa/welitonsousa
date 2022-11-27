@@ -4,6 +4,7 @@ import Header from "../../components/core/header"
 import { IPost } from "../../interfaces/IPost"
 import Image from 'next/image'
 import { useRouter } from "next/router"
+import { prisma } from "../../lib/prisma"
 interface Props {posts: IPost[]}
 
 export default function PostsPage({ posts }: Props) {
@@ -43,11 +44,15 @@ export default function PostsPage({ posts }: Props) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch('http://localhost:3000//api/post')
+  const response = await fetch('http://localhost:3000/api/post')
   const data = await response.json()
+
+  console.log('================================================')
+  console.log(data);
+  console.log('================================================')
   return {
     props: {
-      posts: data.posts
+      posts: [...data.posts]
     }
   }
 }

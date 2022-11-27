@@ -8,17 +8,12 @@ const handler: NextApiHandler = async (req, res) => {
     if (!id) throw new Error("");
 
     const post = await prisma.post.findFirst({
+      where: { title: id as string },
       include: {
         descriptions: {
-          orderBy: {
-            id: 'asc'
-          }
+          orderBy: {id: 'asc'}
         }
       },
-      where: {
-        title: id as string,
-
-      }
     })
     if (!post) return res.status(404).json({ message: 'Post não encontrado' })
     return res.json({

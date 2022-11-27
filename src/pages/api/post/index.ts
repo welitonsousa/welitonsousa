@@ -4,23 +4,21 @@ import { prisma } from '../../../lib/prisma'
 
 const _get: NextApiHandler = async (_, res) => {
   try {
-    const response = await prisma.post.findMany({
+    const posts = await prisma.post.findMany({
       orderBy: {createdAt: 'desc'},
       include: {
         descriptions: {
-          orderBy: {
-            id: 'desc'
-          }
+          orderBy: { id: 'desc' }
         }
       }
     })
 
-    return res.send({
-      posts: response
-    })
-
+    return res.json({ posts })
   } catch (e) {
-
+    
+    console.log('================================================')
+    console.log(e);
+    console.log('================================================')
     return res.status(500).json({ message: "Erro ao retornar os posts" })
   }
 }
