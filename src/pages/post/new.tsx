@@ -16,16 +16,16 @@ export default function NewPostPage() {
   const router = useRouter()
 
   async function saveImage(file: File | string | undefined | null): Promise<string | null | undefined> {
+    console.log('chegou a fazer a request')
+
     if (!file || typeof (file) === "string") return
-    try {
-      const body = new FormData()
-      body.set('image', file)
-      body.set('key', key)
-      const response = await api.post('/api/send-file', body)
-      return response.data.url
-    } catch (e) {
-      return
-    }
+    const body = new FormData()
+    body.set('image', file)
+    body.set('key', key)
+    console.log('chegou a fazer a request')
+    const response = await api.post('/api/send-file', body)
+    return response.data.url
+
   }
 
   async function saveNewPost() {
@@ -34,13 +34,13 @@ export default function NewPostPage() {
         saveImage(post.image),
         ...post.descriptions.map((e) => saveImage(e.image))
       ])
-      const data = { ...post } 
-      
+      const data = { ...post }
+
       data.image = urls[0]
       data.descriptions = data.descriptions.map((e, index) => (
         { ...e, image: urls[index + 1] }
       ))
-      await api.post('/api/post', {key, ...data})
+      await api.post('/api/post', { key, ...data })
       router.push('/post')
       toast("Post criado com sucesso")
     } catch (e) {
@@ -50,7 +50,7 @@ export default function NewPostPage() {
   }
 
   function addDescription() {
-    setPost({ ...post, descriptions: [...post.descriptions, {...initDescription}] })
+    setPost({ ...post, descriptions: [...post.descriptions, { ...initDescription }] })
   }
 
   function changeDescriptionValue(key: string, value: string | File | undefined, index: number) {

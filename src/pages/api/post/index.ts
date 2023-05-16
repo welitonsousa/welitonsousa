@@ -1,18 +1,19 @@
 import { NextApiHandler } from 'next'
 import { IPost } from '../../../interfaces/IPost'
-import { prisma } from '../../../lib/prisma'
+import { Prisma } from '../../../lib/prisma'
+
+
 
 const _get: NextApiHandler = async (_, res) => {
   try {
-    const posts = await prisma.post.findMany({
-      orderBy: {createdAt: 'desc'},
+    const posts = await Prisma.instance.cliente.post.findMany({
+      orderBy: { createdAt: 'desc' },
       include: {
         descriptions: {
           orderBy: { id: 'desc' }
         }
       }
     })
-
     return res.json({ posts })
   } catch (e) {
     return res.status(500).json({ message: "Erro ao retornar os posts" })
@@ -24,7 +25,7 @@ const _post: NextApiHandler = async (req, res) => {
     const post = req.body as IPost
     if (req.body.key != process.env.POST_KEY) return res.status(401).end()
 
-    const response = await prisma.post.create({
+    const response = await Prisma.instance.cliente.post.create({
       data: {
         image: post.image as string,
         title: post.title,
@@ -45,6 +46,7 @@ const _post: NextApiHandler = async (req, res) => {
     })
     return res.json({ message: "Novo post cadastrado", data: response })
   } catch (e) {
+    console.log(e)
     return res.status(500).json({ message: "Não foi possível cadastrar este post" })
   }
 };

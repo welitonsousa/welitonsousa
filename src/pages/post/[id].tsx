@@ -7,7 +7,6 @@ import Footer from '../../components/core/footer'
 import Visibility from '../../components/visibility'
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from '../../styles/dracula'
-import { prisma } from '../../lib/prisma'
 interface Props { post: IPost }
 
 export default function PostPage({ post }: Props) {

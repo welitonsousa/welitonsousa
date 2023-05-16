@@ -1,5 +1,5 @@
 import { NextApiHandler } from "next";
-import { prisma } from "../../../lib/prisma";
+import { Prisma } from "../../../lib/prisma";
 import { Formatters } from "../../../utils/formatters";
 
 const handler: NextApiHandler = async (req, res) => {
@@ -7,7 +7,7 @@ const handler: NextApiHandler = async (req, res) => {
     const id = req.query.id
     if (!id) throw new Error("");
 
-    const post = await prisma.post.findFirst({
+    const post = await Prisma.instance.cliente.post.findFirst({
       where: { title: id as string },
       include: {
         descriptions: {
