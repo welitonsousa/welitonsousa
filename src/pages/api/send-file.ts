@@ -22,7 +22,6 @@ const handler: NextApiHandler = async (req, res) => {
     const form = new formidable.IncomingForm();
     form.parse(req, async function (_, fields, files) {
       try {
-        console.log('fields', fields)
         if (fields.key != process.env.POST_KEY) return res.status(401).end()
         const image = await _saveFile(files.image)
         if (image) return res.json({  message: "Imagem salva com sucesso", url: image })
