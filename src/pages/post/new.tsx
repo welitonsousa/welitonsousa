@@ -16,13 +16,11 @@ export default function NewPostPage() {
   const router = useRouter()
 
   async function saveImage(file: File | string | undefined | null): Promise<string | null | undefined> {
-    console.log('chegou a fazer a request')
 
     if (!file || typeof (file) === "string") return
     const body = new FormData()
     body.set('image', file)
     body.set('key', key)
-    console.log('chegou a fazer a request')
     const response = await api.post('/api/send-file', body)
     return response.data.url
 
