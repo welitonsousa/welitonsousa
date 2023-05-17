@@ -93,7 +93,8 @@ export async function getStaticProps() {
   return {
     props: {
       posts: posts.map((e) => ({ ...e, createdAt: '' }))
-    }
+    },
+    revalidate: 60
   }
 }
 
