@@ -67,9 +67,11 @@ export default function ProjectPage({ project }: Props) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
+
     paths: profileData.projects.map((e) => {
       return { params: { id: Formatters.replaceAll(e.name.toLowerCase()) } }
     }),
+
     fallback: false
   }
 }
@@ -78,6 +80,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const id = context?.params?.id as string | undefined
   const project = profileData.projects.find((e) => Formatters.replaceAll(e.name) === Formatters.replaceAll(id  || ''))
   return {
+    revalidate: 60,
     props: { project: project }
   }
 }
