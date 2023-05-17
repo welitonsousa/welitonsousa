@@ -6,6 +6,8 @@ import { IPost } from "../../interfaces/IPost"
 import Image from 'next/image'
 import { useRouter } from "next/router"
 import React, { useState, useEffect } from "react";
+import { Prisma } from "../../lib/prisma"
+import Visibility from "../../components/visibility"
 
 interface Props { posts: IPost[] }
 
@@ -15,7 +17,7 @@ export default function PostsPage({ posts }: Props) {
 
 
   useEffect(() => {
-    setPosts(posts)
+    setPosts(posts ?? [])
   }, [])
 
   const router = useRouter()
@@ -35,41 +37,62 @@ export default function PostsPage({ posts }: Props) {
       </Header>
       <hr />
 
+      <Visibility if={!postsList.length}>
+        <div className="w-full flex justify-center pt-[20%]">
 
+          <Image
+            src="/empty.png"
+            alt="not found post"
+            width={200}
+            height={200}
+            className="rounded-t-md"
+          />
+        </div>
+        <h2 className="text-center">Nenhum post encontrado</h2>
+      </Visibility>
       <main className="pt-4 grid max-sm:grid-cols-1 max-md:grid-cols-2 grid-cols-3 justify-items-center gap-2">
-        {postsList.filter(filterPosts).flatMap((post: IPost, index) => {
-          return <div
-            className="w-full h-96 bg-slate-800 rounded-md hover:bg-slate-700 cursor-pointe"
-            onClick={() => gotoPost(post)}
-            key={index}>
 
-            <Image
-              src={post.image as string}
-              alt={post.title}
-              width={100}
-              height={100}
-              className="rounded-t-md w-full h-1/2 object-cover"
-            />
-            <div className="h-1/2 p-2 overflow-hidden">
-              <h4 className="text-[1.5rem]">{post.title}</h4>
-              <p>{post.smallDescription} {post.smallDescription} </p>
+
+        <Visibility if={!!postsList.length}>
+          {postsList.filter(filterPosts).flatMap((post: IPost, index) => {
+            return <div
+              className="w-full h-96 bg-slate-800 rounded-md hover:bg-slate-700 cursor-pointe"
+              onClick={() => gotoPost(post)}
+              key={index}>
+
+              <Image
+                src={post.image as string}
+                alt={post.title}
+                width={100}
+                height={100}
+                className="rounded-t-md w-full h-1/2 object-cover"
+              />
+              <div className="h-1/2 p-2 overflow-hidden">
+                <h4 className="text-[1.5rem]">{post.title}</h4>
+                <p>{post.smallDescription} {post.smallDescription} </p>
+              </div>
             </div>
-          </div>
-        })}
+          })}
+        </Visibility>
+
       </main>
     </div>
   </div>
 }
 
 export async function getStaticProps() {
-  const response = await fetch('http://localhost:3000/api/post')
-  const data = await response.json()
-  const posts = []
-  if (data.posts) posts.push(...data.posts)
+  const posts = await Prisma.instance.cliente.post.findMany({
+    orderBy: { id: 'desc' },
+    include: {
+      descriptions: {
+        orderBy: { id: 'desc' }
+      }
+    },
+  })
 
   return {
     props: {
-      posts: posts
+      posts: posts.map((e) => ({ ...e, createdAt: '' }))
     }
   }
 }

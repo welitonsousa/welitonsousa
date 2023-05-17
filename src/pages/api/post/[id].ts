@@ -1,6 +1,5 @@
 import { NextApiHandler } from "next";
 import { Prisma } from "../../../lib/prisma";
-import { Formatters } from "../../../utils/formatters";
 
 const handler: NextApiHandler = async (req, res) => {
   try {
@@ -11,7 +10,7 @@ const handler: NextApiHandler = async (req, res) => {
       where: { title: id as string },
       include: {
         descriptions: {
-          orderBy: {id: 'asc'}
+          orderBy: {id: 'desc'}
         }
       },
     })

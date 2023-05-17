@@ -7,9 +7,14 @@ import Footer from '../../components/core/footer'
 import Visibility from '../../components/visibility'
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from '../../styles/dracula'
+import { Prisma } from '../../lib/prisma'
 interface Props { post: IPost }
 
 export default function PostPage({ post }: Props) {
+  if (!post) return <div className='flex justify-center p-4'>
+    <h2>Post não encontrado</h2>
+  </div>
+
   return <div className='flex justify-center p-4'>
     <Head content={post.smallDescription} title={post.title} image={post.image as string | null | undefined} />
     <div className='max-w-5xl w-full'>
@@ -78,9 +83,15 @@ export default function PostPage({ post }: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch('http://localhost:3000/api/post')
-  const data = await response.json()
-  const ids = (data.posts as IPost[]).flatMap((e) => ({
+  const posts = await Prisma.instance.cliente.post.findMany({
+    orderBy: { id: 'desc' },
+    include: {
+      descriptions: {
+        orderBy: { id: 'desc' }
+      }
+    },
+  })
+  const ids = posts.map((e) => ({
     params: { id: e.title }
   }))
 
@@ -92,10 +103,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id
-  const response = await fetch(`http://localhost:3000/api/post/${id}`)
-  const data = await response.json()
-
+  const title = decodeURI(id?.toString() ?? '')
+  const post = await Prisma.instance.cliente.post.findFirst({
+    where: { title },
+    include: {
+      descriptions: {
+        orderBy: { id: 'desc' }
+      }
+    },
+  })
   return {
-    props: { post: data.post },
+    props: {post: {...post, createdAt: '' }},
+    revalidate: 60 * 60 * 24,
   }
 }
