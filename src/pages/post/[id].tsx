@@ -108,12 +108,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
     where: { title },
     include: {
       descriptions: {
-        orderBy: { id: 'desc' }
+        orderBy: { id: 'asc' }
       }
     },
   })
   return {
-    props: {post: {...post, createdAt: '' }},
-    revalidate: 60 * 60 * 24,
+    props: {post: {...post, createdAt: post?.createdAt.toISOString() }},
+    revalidate: 60,
   }
 }

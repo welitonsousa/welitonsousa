@@ -83,11 +83,6 @@ export default function PostsPage({ posts }: Props) {
 export async function getStaticProps() {
   const posts = await Prisma.instance.cliente.post.findMany({
     orderBy: { id: 'desc' },
-    include: {
-      descriptions: {
-        orderBy: { id: 'desc' }
-      }
-    },
   })
 
   return {
