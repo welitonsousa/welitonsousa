@@ -1,23 +1,15 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Image from 'next/image'
+import { Project } from '../../interfaces/IProject'
 import { profileData } from '../../constants/profile'
+import { Formatters } from '../../utils/formatters'
+import Image from 'next/image'
 import Footer from '../../components/core/footer'
 import AppHead from '../../components/core/head'
-import { Project } from '../../interfaces/IProject'
-import { Formatters } from '../../utils/formatters'
-import { useRouter } from 'next/router'
 import Header from '../../components/core/header'
+
 interface Props { project: Project }
 
-
-
 export default function ProjectPage({ project }: Props) {
-  const router = useRouter()
-  
-  function goToHome() {
-    router.push('/')
-  }
-
   return (
     <div className='flex row justify-center'>
       <AppHead
@@ -54,6 +46,7 @@ export default function ProjectPage({ project }: Props) {
                 width={1000}
                 height={1000}
                 key={index}
+                className={`col-span-${e.proportion}`}
                 alt={`captura de imagem - ${index + 1}`}
               />
             ))}

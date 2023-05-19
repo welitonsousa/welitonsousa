@@ -29,13 +29,17 @@ export default function PostPage({ post }: Props) {
           className="rounded-md w-full h-80 object-cover"
         />
         <h1 className='text-[2rem] pt-4'>{post.title}</h1>
-        <h3 className='pb-2'>{post.smallDescription}</h3>
+        <h2 className='text-[1.4rem] pb-2'>{post.smallDescription}</h2>
         <hr className='py-4' />
 
         {post.descriptions.map((desc, index) => (
           <div key={index}>
-            <h4 className='text-[1.2rem] font-bold '>{desc.title}</h4>
-            <p className='py-2'>{desc.description}</p>
+            <Visibility if={!!desc.title}>
+              <h3 className='text-[1.4rem] pt-4 font-bold '>{desc.title}</h3>
+            </Visibility>
+            <Visibility if={!!desc.description}>
+              <p className='py-2' dangerouslySetInnerHTML={{__html: desc.description!}}></p>
+            </Visibility>
 
             <Visibility if={!!desc.image}>
               <Image
