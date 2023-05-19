@@ -25,7 +25,7 @@ export const profileData: HomeProps = {
     },
     {
       "name": "Linkedin",
-      "link": "https://www.linkedin.com/in/weliton-sousa-330a29190/",
+      "link": "https://www.linkedin.com/in/welitonsousa/",
       "bg": "#0073b1"
     }
   ],
@@ -93,10 +93,28 @@ export const profileData: HomeProps = {
       "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
       "link": "https://github.com/welitonsousa/vakinha_burguer",
       "screenshots": [
-        {proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/splash.png"},
-        {proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/products.png"},
-        {proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/product.png"},
-        {proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/confirmation.png"}
+        { proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/splash.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/products.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/product.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/confirmation.png" }
+      ]
+    },
+    {
+      "name": "Vakinha Burguer - Web gestor",
+      "small": "App para gestores de restaurantes gerenciarem seus produtos e pedidos",
+      "description": [
+        "Este projeto tem como princípio atender os administradores, de forma que eles possam gerenciar: produtos, pedidos, e formas de pagamento.",
+        "Este projeto foi desenvolvido utilizando arquitetura limpa, também conhecida como Clean Architecture, é uma abordagem de desenvolvimento de software que visa separar as preocupações em camadas distintas, promovendo a modularidade, a testabilidade e a manutenibilidade do código. Neste projeto, foi utilizada essa arquitetura para alcançar uma estrutura clara e flexível, facilitando o desenvolvimento e a evolução contínua do aplicativo.",
+        "Também foi utilizado o Flutter Modular, que é um framework que auxilia na organização do código, separando-o em módulos, cada um com sua responsabilidade. Com isso, o código fica mais organizado, facilitando a manutenção e a evolução do aplicativo.",
+        "Juntamente do Modular, foi utilizado o MobX, que é uma biblioteca de gerenciamento de estado que ajuda a implementar o padrão de projeto Observer para gerenciar o estado de forma reativa."
+      ],
+      "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
+      "link": "https://github.com/welitonsousa/vakinha_burguer_web_gestor",
+      "screenshots": [
+        { proportion: '3', link: "https://github.com/welitonsousa/vakinha_burguer_web_gestor/raw/main/assets/screenshots/sign.png" },
+        { proportion: '3', link: "https://github.com/welitonsousa/vakinha_burguer_web_gestor/raw/main/assets/screenshots/payments.png" },
+        { proportion: '3', link: "https://github.com/welitonsousa/vakinha_burguer_web_gestor/raw/main/assets/screenshots/products.png" },
+        { proportion: '3', link: "https://github.com/welitonsousa/vakinha_burguer_web_gestor/raw/main/assets/screenshots/requests.png" }
       ]
     },
     {
@@ -106,12 +124,12 @@ export const profileData: HomeProps = {
       "image": "https://github.com/welitonsousa/movie_app/raw/main/assets/images/logo-dark.png",
       "link": "https://github.com/welitonsousa/movie_app",
       "screenshots": [
-        {proportion: '1' , link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/home.png"},
-        {proportion: '1' , link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/detail.png"},
-        {proportion: '1' , link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/similares.png"},
-        {proportion: '1' , link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/genre.png"},
-        {proportion: '1' , link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/favorites.png"},
-        {proportion: '1' , link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/search.png"}
+        { proportion: '1', link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/home.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/detail.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/similares.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/genre.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/favorites.png" },
+        { proportion: '1', link: "https://github.com/welitonsousa/movie_app/raw/main/assets/screenshots/search.png" }
       ]
     },
     {
@@ -122,12 +140,12 @@ export const profileData: HomeProps = {
       "link": "https://github.com/welitonsousa/nlw-copa/",
       "screenshots": [
         // {proportion: '3', link: "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/screenshots/home.png?raw=true"},
-        {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/signin.png?raw=true"},
-        {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/new_pool.png?raw=true"},
-        {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/list_pool.png?raw=true"},
-        {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/search_pool.png?raw=true"},
-        {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/guesses_pool.png?raw=true"},
-        {proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/share_pool.png?raw=true"}
+        { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/signin.png?raw=true" },
+        { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/new_pool.png?raw=true" },
+        { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/list_pool.png?raw=true" },
+        { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/search_pool.png?raw=true" },
+        { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/guesses_pool.png?raw=true" },
+        { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/share_pool.png?raw=true" }
 
       ]
     },
@@ -138,7 +156,7 @@ export const profileData: HomeProps = {
       "image": "https://github.com/welitonsousa/cripto_currency/blob/main/assets/logo.png?raw=true",
       "link": "https://github.com/welitonsousa/cripto_currency",
       "screenshots": [
-        {proportion: '1', link: "https://github.com/welitonsousa/cripto_currency/blob/main/assets/screenshots/home.png?raw=true"}
+        { proportion: '1', link: "https://github.com/welitonsousa/cripto_currency/blob/main/assets/screenshots/home.png?raw=true" }
       ]
     },
     {
