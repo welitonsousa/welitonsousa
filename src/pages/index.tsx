@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import AppCard from '../components/AppCard'
-import Divider from '../components/Divider'
-import ProjectCard from '../components/ProjectCard'
 import { Project } from '../interfaces/IProject'
 import { Social } from '../interfaces/ISocial'
 import { Tec } from '../interfaces/ITec'
 import { profileData } from '../constants/profile'
-import AppHead from '../components/core/head'
-import Footer from '../components/core/footer'
 import { Formatters } from '../utils/formatters'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import AppCard from '../components/AppCard'
+import Divider from '../components/Divider'
+import ProjectCard from '../components/ProjectCard'
+import AppHead from '../components/core/head'
+import Footer from '../components/core/footer'
 
 
 export interface HomeProps {
@@ -34,9 +34,9 @@ export default function Home(props: HomeProps) {
   return (
     <div className='flex row justify-center'>
 
-      <AppHead title='Weliton Sousa' image={null} content={null} />
+      <AppHead image={null} content={null} />
 
-      <div className='p-10 max-w-5xl '>
+      <div className='p-10 max-w-5xl'>
         <main>
           <div className='grid justify-items-center'>
             <Image

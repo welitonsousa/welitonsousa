@@ -1,13 +1,14 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { IPost } from '../../interfaces/IPost'
+import { dracula } from '../../styles/dracula'
+import { Prisma } from '../../lib/prisma'
 import Head from '../../components/core/head'
 import Header from '../../components/core/header'
-import { IPost } from '../../interfaces/IPost'
 import Image from 'next/image'
 import Footer from '../../components/core/footer'
 import Visibility from '../../components/visibility'
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from '../../styles/dracula'
-import { Prisma } from '../../lib/prisma'
+
 interface Props { post: IPost }
 
 export default function PostPage({ post }: Props) {

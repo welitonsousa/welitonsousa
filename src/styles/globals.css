@@ -2,10 +2,10 @@
 @tailwind utilities;
 @tailwind components;
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
 @layer components {
   .button-primary {
-    @apply bg-blue-400 rounded-full py-2 px-10 mt-6
+    @apply bg-blue-400 rounded-full py-2 px-10 mt-6;
   }
 }
