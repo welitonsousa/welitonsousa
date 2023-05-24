@@ -69,7 +69,7 @@ export default function PostsPage({ posts }: Props) {
               />
               <div className="h-1/2 p-2 overflow-hidden">
                 <h4 className="text-[1.5rem]">{post.title}</h4>
-                <p>{post.smallDescription} {post.smallDescription} </p>
+                <p>{post.smallDescription}</p>
               </div>
             </div>
           })}
