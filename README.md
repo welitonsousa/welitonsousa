@@ -6,6 +6,9 @@ Desenvolvedor de software Mobile
 
 Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter, e levo muito a sério o paradigma de orientação a objetos
 
+
+<img src="https://komarev.com/ghpvc/?username=welitonsousa&label=Profile%20views&color=0e75b6&style=flat" alt="welitonsousa" />
+
 ### Onde você pode me encontrar na web? 🌎
 
 linkedin: [welitonsousa](https://www.linkedin.com/in/weliton-sousa-330a29190/)<br>
