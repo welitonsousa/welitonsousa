@@ -1,3 +1,6 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 
 generator client {
   provider = "prisma-client-js"
@@ -14,6 +17,7 @@ model Post {
   id               Int           @id @unique @default(autoincrement())
   createdAt        DateTime      @default(now())
   title            String        @unique
+  domain           String        @unique
   image            String
   imageExample     String?
   externalLink     String?

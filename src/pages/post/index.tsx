@@ -8,6 +8,7 @@ import { useRouter } from "next/router"
 import React, { useState, useEffect } from "react";
 import { Prisma } from "../../lib/prisma"
 import Visibility from "../../components/visibility"
+import { GetStaticProps } from "next"
 
 interface Props { posts: IPost[] }
 
@@ -22,7 +23,7 @@ export default function PostsPage({ posts }: Props) {
 
   const router = useRouter()
   function gotoPost(post: IPost) {
-    router.push('/post/' + encodeURI(post.title))
+    router.push('/post/' + post.domain)
   }
   function filterPosts(e: IPost) {
     return e.title?.toLowerCase().includes(search.toLowerCase()) || e.smallDescription?.toLowerCase().includes(search.toLowerCase())
@@ -80,11 +81,10 @@ export default function PostsPage({ posts }: Props) {
   </div>
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
   const posts = await Prisma.instance.cliente.post.findMany({
     orderBy: { id: 'desc' },
   })
-
   return {
     props: {
       posts: posts.map((e) => ({ ...e, createdAt: '' }))
@@ -92,4 +92,3 @@ export async function getStaticProps() {
     revalidate: 60
   }
 }
-

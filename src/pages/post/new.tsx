@@ -97,7 +97,13 @@ export default function NewPostPage() {
                 />
               </div>
               <TextField
-                className="col-span-4"
+                className="col-span-2"
+                label="Domínio"
+                value={post.domain}
+                onChange={(v) => setPost({ ...post, domain: v.target.value })}
+              />
+              <TextField
+                className="col-span-2"
                 label="Link externo"
                 value={post.externalLink}
                 onChange={(v) => setPost({ ...post, externalLink: v.target.value })}

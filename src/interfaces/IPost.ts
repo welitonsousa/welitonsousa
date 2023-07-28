@@ -2,6 +2,7 @@ export interface IPost {
   id: Number;
   createdAt: Date;
   title: string;
+  domain: string;
   image: string | File | null | undefined;
   smallDescription: string;
   descriptions: IDescription[];
@@ -25,6 +26,7 @@ export const initPostDefault = {
   externalLink: "",
   id: -1,
   image: "",
+  domain: "",
   imageExample: "",
   smallDescription: "",
   createdAt: new Date(),

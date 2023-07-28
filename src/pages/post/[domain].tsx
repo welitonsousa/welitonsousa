@@ -96,21 +96,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
       }
     },
   })
-  const ids = posts.map((e) => ({
-    params: { id: e.title }
+  const domains = posts.map((e) => ({
+    params: { domain: e.domain }
   }))
 
   return {
     fallback: false,
-    paths: ids,
+    paths: domains,
   }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const id = context.params?.id
-  const title = decodeURI(id?.toString() ?? '')
+  const domain: string = (context.params?.domain  ?? '') as string
   const post = await Prisma.instance.cliente.post.findFirst({
-    where: { title },
+    where: { domain },
     include: {
       descriptions: {
         orderBy: { id: 'asc' }

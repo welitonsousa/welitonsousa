@@ -3,6 +3,7 @@ CREATE TABLE "Post" (
     "id" SERIAL NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "title" TEXT NOT NULL,
+    "domain" TEXT NOT NULL,
     "image" TEXT NOT NULL,
     "imageExample" TEXT,
     "externalLink" TEXT,
@@ -30,6 +31,9 @@ CREATE UNIQUE INDEX "Post_id_key" ON "Post"("id");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Post_title_key" ON "Post"("title");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Post_domain_key" ON "Post"("domain");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Description_id_key" ON "Description"("id");

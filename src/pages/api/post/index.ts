@@ -29,6 +29,7 @@ const _post: NextApiHandler = async (req, res) => {
       data: {
         image: post.image as string,
         title: post.title,
+        domain: post.domain,
         smallDescription: post.smallDescription,
         descriptions: {
           createMany: {
