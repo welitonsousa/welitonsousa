@@ -10,7 +10,7 @@ export const profileData: HomeProps = {
     },
     {
       "name": "WhatsApp",
-      "link": "http://my-whats.com/4a9120d60d",
+      "link": "https://wa.me/5589994043461",
       "bg": "#00614C"
     },
     {
