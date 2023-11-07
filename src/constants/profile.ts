@@ -23,16 +23,17 @@ export const profileData: HomeProps = {
       "link": "https://github.com/welitonsousa",
       "bg": "#57606a"
     },
-    {
-      "name": "Linkedin",
-      "link": "https://www.linkedin.com/in/welitonsousa/",
-      "bg": "#0073b1"
-    }
+    // {
+    //   "name": "Linkedin",
+    //   "link": "https://www.linkedin.com/in/welitonsousa/",
+    //   "bg": "#0073b1"
+    // }
   ],
   "description": [
     "Olá, meu nome é Weliton Sousa 👋",
     "Sou aluno da universidade federal do Piauí e Desenvolvedor de software (sites e aplicativos)",
-    "Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter e VueJs em um chat online, e levo muito a sério o paradigma de orientação a objetos"
+    "Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter e VueJs em um chat online em tempo real, e levo muito a sério o paradigma de orientação a objetos buscando sempre me aprimorar.",
+    "Sou um desenvolvedor que gosta de trabalhar em equipe, e que está sempre disposto a aprender e ensinar."
   ],
   "tecs": [
     {
@@ -63,9 +64,16 @@ export const profileData: HomeProps = {
   "projects": [
     {
       "name": "Fastzap",
-      "small": "Site e app de chat online",
-      "description": ["Site a aplicativo de chat online que consome a api do Whatsapp para envio e recebimento de mensagens em tempo real. O foco deste app é oferecer uma solução boa para empresas que trabalham com SAC (Sistema de Atendimento ao Cliente) via Whatsapp."],
-      "image": "https://www.fastzap.chat/wp-content/uploads/2021/10/image002-768x199.png",
+      "small": "Site e app (Android, IOS, MacOS, IpadOS e Windows) de chat online",
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #GETX &nbsp; &nbsp; #CLEAN_ARCH &nbsp; &nbsp; #WEBSOCKET",
+        "Site a aplicativo de chat online que consome a api do Whatsapp para envio e recebimento de mensagens em tempo real. O foco deste app é oferecer uma solução boa para empresas que trabalham com SAC (Sistema de Atendimento ao Cliente) via Whatsapp.",
+        "Onde com apenas 1 número de Whatsapp, a empresa consegue concentrar inúmeros atendimentos, e com isso, consegue ter um histórico de conversas, e também, consegue ter uma visão geral de todos os atendimentos que estão sendo realizados.",
+        "Possuindo um controle total de todos os seus atendentes e clientes, podendo adicionar, remover, bloquear e desbloquear atendentes e clientes, além de poder visualizar o histórico de conversas de cada atendente e cliente.",
+        "Além disso, a aplicação possui uma dashboard para o gestor do estabelecimento, para o mesmo poder ter um visão e controle de leads de vendas no seu sistema."
+      
+      ],
+      "image": "https://gestor.fastzap.chat/assets/logo-fastzap-ae968496.svg",
       "link": "https://play.google.com/store/apps/details?id=app.fastzap.chat",
       "screenshots": [
         { link: "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/login.png", proportion: '1' },
@@ -78,19 +86,31 @@ export const profileData: HomeProps = {
     {
       "name": "Festit",
       "small": "App de planejamentos e ornamentações de festas",
-      "description": ["Aplicativo com foco na gestão e planejamento de festas, com a possibilidade de criar convites, calcular gastos, gerenciar convidados entre outras funcionalidades."],
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #FIREBASE &nbsp; &nbsp; #CLEAN_ARCH &nbsp; &nbsp; #BLOCK",
+        "Aplicativo com foco na gestão e planejamento de festas, com a possibilidade de criar convites, calcular gastos, gerenciar convidados entre outras funcionalidades.",
+        "Este aplicativo foi desenvolvido por meio de contrato, onde a mesma aplicação se encontra disponível na Play Store e na App Store, com o nome de Festit. possuindo um número elevado de downloads e avaliações positivas.",
+        "O mesmo ja se encontra com muitos investidores por trás do funcionamento do app, e com isso, o mesmo está em constante evolução."
+      ],
       "image": "https://static.wixstatic.com/media/feafcb_4354ec3d4e584aafa9ad0e3e022f26a3~mv2.png/v1/fill/w_140,h_45,al_c,q_85,usm_0.66_1.00_0.01/Logo-Topo-img-3875382-20210306223340.webp",
       "link": "https://play.google.com/store/apps/details?id=br.com.festit.app",
       "screenshots": [
 
-        { link: "https://play-lh.googleusercontent.com/tW2ujiWk3jVLgjb2sEtUkp_lUXPhY44SyWsPpOBjpqwh_r9OxGs3VuY9H1jkCU6uKNju=w2880-h1422-rw", proportion: '1' }
+        { link: "https://play-lh.googleusercontent.com/tW2ujiWk3jVLgjb2sEtUkp_lUXPhY44SyWsPpOBjpqwh_r9OxGs3VuY9H1jkCU6uKNju=w2880-h1422-rw", proportion: '1' },
+        { link: "https://play-lh.googleusercontent.com/gm9v2uAw_BSRtIQSSnt3JWLdF1jydTVmsAcAMuLjx99EhSS9RYnRZGPl-R44g0dYkMo=w5120-h2880-rw", proportion: '1' },
+        { link: "https://play-lh.googleusercontent.com/AzEGiiXoFnioL5KyRLtdoAX5ZSjQmOfc3Z6mOATDxxFz7E9T9OkjylpeI-n7sp0cg_-T=w5120-h2880-rw", proportion: '1' },
+        { link: "https://play-lh.googleusercontent.com/NcS1ZhZ3l7kwzK4ZI6qTg83a1h5zXu40n2REK4d5hhGuwNpwmOr-sSES-_GvY7n7gLs=w5120-h2880-rw", proportion: '1' },
       ]
     },
     {
       "name": "Vakinha Burguer",
       "small": "App de delivery",
-      "description": ["Aplicativo de delivery desenvolvido para aprendizado de arquitetura limpa junto com o GETX, um poderoso sistema de injeção de dependências"],
-      "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #GETX &nbsp; &nbsp; #CLEAN_ARCH &nbsp; &nbsp;",
+        "Nesta aplicação, foram obtidos diversos conhecimentos novos, com uma poderosa aplicação de montagem de uma carrinho de comida, com pagamento via PIX",
+        "Aplicativo de delivery desenvolvido para aprendizado de arquitetura limpa junto com o GETX, um poderoso sistema de injeção de dependências"],
+      
+        "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
       "link": "https://github.com/welitonsousa/vakinha_burguer",
       "screenshots": [
         { proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/splash.png" },
@@ -120,7 +140,14 @@ export const profileData: HomeProps = {
     {
       "name": "Movie APP",
       "small": "Aplicativo de filmes",
-      "description": ["Movie APP é um aplicativo que soluciona o problema de quem não consegue encontrar nada para assistir."],
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #GETX &nbsp; &nbsp; #CLEAN_ARCH &nbsp; &nbsp;",
+        "Movie APP é um aplicativo que soluciona o problema de quem não consegue encontrar nada para assistir.",
+        "Este aplicativo foi desenvolvido buscando sanar um problema pessoal de não conseguir encontrar um filme para assistir",
+        "Para isso, este aplicativo junta filmes detivermos gêneros e categorias de <strong style='color: #0969da'>todos os streamings mais conhecidos no mercado</strong>.",
+        "Organizados de forma que o usuário possa encontrar o filme que deseja assistir, e também, encontrar filmes semelhantes ao que ele deseja assistir.",
+        "Além de indicar onde é possível assistir aquele filme, sua avaliação no meta critic, sinopse e também é possível assistir todos os seus trailers disponíveis."
+      ],
       "image": "https://github.com/welitonsousa/movie_app/raw/main/assets/images/logo-dark.png",
       "link": "https://github.com/welitonsousa/movie_app",
       "screenshots": [
@@ -135,11 +162,17 @@ export const profileData: HomeProps = {
     {
       "name": "NLW-World cup",
       "small": "App, site e api de bolões com base nos jogos da copa do mundo de 2022",
-      "description": ["O site foi totalmente construído utilizando o framework NextJS, enquanto o app foi construído com Flutter e a api com NodeJS e o prisma juntamente com um banco de dados PostgreSQL"],
-      "image": "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/images/nlw-green.png?raw=true",
+      "description": [
+        "#Flutter &nbsp; &nbsp; #NextJS &nbsp; &nbsp; #NodeJS &nbsp; &nbsp; #Prisma &nbsp; &nbsp; #PostgreSQL",
+        "O site foi totalmente construído utilizando o framework NextJS, enquanto o app foi construído com Flutter e a api com NodeJS e o prisma juntamente com um banco de dados PostgreSQL",
+        "Esta aplicação foi desenvolvida durante o NLW (Next Level Week) da Rocketseat, onde foi desenvolvido um site, um app e uma api, todos com o mesmo objetivo, que é gerenciar bolões de apostas com base nos jogos da copa do mundo de 2022.",
+        "Porem enquanto o app desenvolvido durante o curso foi feito usando o React Native, eu decidi desenvolver o app usando o Flutter, para que eu pudesse aprender mais sobre o framework, e assim, poder comparar com o React Native."
+      ],
+      
+        "image": "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/images/nlw-green.png?raw=true",
       "link": "https://github.com/welitonsousa/nlw-copa/",
       "screenshots": [
-        // {proportion: '3', link: "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/screenshots/home.png?raw=true"},
+        {proportion: '3', link: "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/screenshots/home.png?raw=true"},
         { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/signin.png?raw=true" },
         { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/new_pool.png?raw=true" },
         { proportion: '1', link: "https://github.com/welitonsousa/nlw-copa/blob/main/mobile/assets/screenshots/list_pool.png?raw=true" },
@@ -152,7 +185,13 @@ export const profileData: HomeProps = {
     {
       "name": "Crypto Currency",
       "small": "App de cripto moedas",
-      "description": ["Aplicativo capaz de listar as cripto moedas mais valorizadas no mercado. Este app foi desenvolvido utilizando GETX"],
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #GETX &nbsp; &nbsp; #CLEAN_ARCH &nbsp; &nbsp; #API_REST",
+        "Aplicativo capaz de listar as cripto moedas mais valorizadas no mercado em tempo real, ordenadas por valor de mercado.",
+        "Além disso, é possível ver detalhes de cada cripto moeda, como: valor, variação, valor de mercado, volume, entre outros.",
+        "E também saber se o valor da mesma caiu ou subiu em relação ao dia anterior, e também em relação a semana anterior."
+
+      ],
       "image": "https://github.com/welitonsousa/cripto_currency/blob/main/assets/logo.png?raw=true",
       "link": "https://github.com/welitonsousa/cripto_currency",
       "screenshots": [
@@ -162,10 +201,16 @@ export const profileData: HomeProps = {
     {
       "name": "CardLife",
       "small": "App de carteira digital",
-      "description": ["Aplicativo de carteira digital, focada no âmbito hospitalar, para agendamentos e pagamentos de consultas."],
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #Block &nbsp; &nbsp; #API_REST",
+        "Aplicativo de carteira digital, focada no âmbito hospitalar, para agendamentos e pagamentos de consultas.",
+        "Participei desde projeto como Freelancer, afim de finalizar o projeto, e também, deixa-lo pronto para ser lançado na Play Store e na App Store.",
+      ],
+      "screenshots": [
+        { proportion: '3', link: "/cardlife.png" }
+      ],
       "image": "https://cardlife.com.br/wp-content/uploads/2021/01/brand.png",
       "link": "https://cardlife.com.br/",
-      "screenshots": []
     }
   ]
 }

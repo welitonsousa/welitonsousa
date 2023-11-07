@@ -47,10 +47,13 @@ export default function Home(props: HomeProps) {
               width={200} height={200}
             />
             <h1 className='text-center text-[30px]'>Weliton Sousa</h1>
-            <div className='max-sm:text-justify text-center leading-6'>
-              <h2>Olá, meu nome é Weliton de Sousa Araújo👋</h2><br />
-              <p> Sou aluno da universidade federal do Piauí e Desenvolvedor de software (sites e aplicativos)</p><br />
-              <p>Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com Flutter e VueJs em um chat online, e levo muito a sério o paradigma de orientação a objetos</p>
+            <div className='max-sm:text-justify text-center leading-6 flex flex-col gap-4'>
+              <h2>Olá, meu nome é Weliton de Sousa Araújo👋</h2>
+              <p>Sou aluno da Universidade Federal do Piauí e Desenvolvedor de software (sites e aplicativos) <strong className='text-[#0969da]'>desde 2018.</strong></p>
+              <p>Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com <strong className='text-[#0969da]'>Flutter e VueJs</strong> em um chat online em tempo real utilizando websocket.</p> 
+              <p>Umas das coisas que mais amo na programação é o orientação a objetos, e levo muito a sério este paradigma.</p>
+              <p>Sou um desenvolvedor que gosta de trabalhar em equipe, e que está sempre disposto a aprender e ensinar.</p> 
+              <p>Sou um programador experiente e conto com diversos projetos no portfólio, onde já publiquei apps construídos para IOS, Android, Windows, MacOS e IPadOS</p>
             </div>
             <div className='w-full'>
               <button className='button-primary' onClick={goToPosts}>Veja os últimos posts</button>

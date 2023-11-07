@@ -31,7 +31,7 @@ export default function ProjectPage({ project }: Props) {
 
           <section className='text-justify'>
             {project.description.flatMap((e, index) =>
-              (<p key={index} className='w-full py-2'>{e}</p>)
+              (<p key={index} dangerouslySetInnerHTML={{__html: e}} className='w-full py-2'></p>)
             )}
             <a href={project.link} target="_blank" rel="noreferrer">
               <button className='button-primary'>Acessar projeto</button>
