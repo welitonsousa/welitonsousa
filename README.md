@@ -11,7 +11,6 @@ Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualme
 
 ### Onde você pode me encontrar na web? 🌎
 
-linkedin: [welitonsousa](https://www.linkedin.com/in/weliton-sousa/)<br>
 website: [https://welitonsousa.vercel.app/](https://welitonsousa.vercel.app/)<br>
 email: welitonubuntu@gmail.com<br>
 
