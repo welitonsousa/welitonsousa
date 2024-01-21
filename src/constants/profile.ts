@@ -23,11 +23,11 @@ export const profileData: HomeProps = {
       "link": "https://github.com/welitonsousa",
       "bg": "#57606a"
     },
-    // {
-    //   "name": "Linkedin",
-    //   "link": "https://www.linkedin.com/in/welitonsousa/",
-    //   "bg": "#0073b1"
-    // }
+    {
+      "name": "Linkedin",
+      "link": "https://www.linkedin.com/in/welitonsousa/",
+      "bg": "#0073b1"
+    }
   ],
   "description": [
     "Olá, meu nome é Weliton Sousa 👋",
