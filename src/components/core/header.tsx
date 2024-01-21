@@ -8,23 +8,23 @@ interface Props {
   children?: React.ReactNode
 }
 
-export default function Header(props: Props) {
-  const router = useRouter()
-  function goTo(path: string | null) {
-    if (path) router.push(path)
-  }
-
+export default function Header(props: Props) {  
   return <header className='flex justify-between items-center pb-4'>
     <Tooltip title="Voltar a página inicial">
-      <div className='flex items-center cursor-pointer h-12' onClick={() => goTo('/')}>
-        <Image src='/logo.png' width={48} height={48} alt="logotipo do site" className="pr-2" />
-        <h3 className='pl-4 max-sm:hidden text-[20px]'>Weliton Sousa</h3>
-      </div>
+      <a href="./">
+        <div className='flex items-center cursor-pointer h-12'>
+          <Image src='/logo.png' width={48} height={48} alt="logotipo do site" className="pr-2" />
+          <h3 className='pl-4 max-sm:hidden text-[20px]'>Weliton Sousa</h3>
+        </div>
+      </a>
     </Tooltip>
 
-    <h1 className='max-sm:text-[15px] text-[30px] cursor-pointer'
-    onClick={() => goTo(props.action)}>{props.title}
-  </h1>
+    <a href={(props.action) ?? ""}>
+
+      <h1 className='max-sm:text-[15px] text-[30px] cursor-pointer'>
+        {props.title}
+      </h1>
+    </a>
   { props.children }
   </header >
 }

@@ -21,10 +21,7 @@ export default function PostsPage({ posts }: Props) {
     setPosts(posts ?? [])
   }, [])
 
-  const router = useRouter()
-  function gotoPost(post: IPost) {
-    router.push('/post/' + post.domain)
-  }
+
   function filterPosts(e: IPost) {
     return e.title?.toLowerCase().includes(search.toLowerCase()) || e.smallDescription?.toLowerCase().includes(search.toLowerCase())
   }
@@ -56,23 +53,25 @@ export default function PostsPage({ posts }: Props) {
 
         <Visibility if={!!postsList.length}>
           {postsList.filter(filterPosts).flatMap((post: IPost, index) => {
-            return <div
-              className="w-full h-96 bg-slate-800 rounded-md hover:bg-slate-700 cursor-pointe"
-              onClick={() => gotoPost(post)}
-              key={index}>
+            return <a href={'/post/' + post.domain}>
+              <div
+                className="w-full h-96 bg-slate-800 rounded-md hover:bg-slate-700 cursor-pointe"
+               
+                key={index}>
 
-              <Image
-                src={post.image as string}
-                alt={post.title}
-                width={100}
-                height={100}
-                className="rounded-t-md w-full h-1/2 object-cover"
-              />
-              <div className="h-1/2 p-2 overflow-hidden">
-                <h4 className="text-[1.5rem]">{post.title}</h4>
-                <p>{post.smallDescription}</p>
+                <Image
+                  src={post.image as string}
+                  alt={post.title}
+                  width={100}
+                  height={100}
+                  className="rounded-t-md w-full h-1/2 object-cover"
+                />
+                <div className="h-1/2 p-2 overflow-hidden">
+                  <h4 className="text-[1.5rem]">{post.title}</h4>
+                  <p>{post.smallDescription}</p>
+                </div>
               </div>
-            </div>
+            </a>
           })}
         </Visibility>
 

@@ -8,10 +8,24 @@ import Image from 'next/image'
 import Footer from '../../components/core/footer'
 import Visibility from '../../components/visibility'
 import SyntaxHighlighter from "react-syntax-highlighter";
+import { FileCopyTwoTone } from '@mui/icons-material/';
+import IconButton from '@mui/material/IconButton'
+import { useState } from 'react'
+import { toast } from "react-toastify";
 
 interface Props { post: IPost }
 
+
 export default function PostPage({ post }: Props) {
+
+  const [code, setCode] = useState('')
+
+  function copyToClipboard(value: string) {
+    navigator.clipboard.writeText(value)
+    toast('Copiado', { type: 'success', autoClose: 2000 })
+    setCode(value)
+  }
+
   if (!post) return <div className='flex justify-center p-4'>
     <h2>Post não encontrado</h2>
   </div>
@@ -21,6 +35,7 @@ export default function PostPage({ post }: Props) {
     <div className='max-w-5xl w-full'>
       <Header action='/post' title="Ver outros posts"></Header>
       <hr />
+
       <main className='flex flex-col pt-4 text-justify'>
         <Image
           src={post.image as string}
@@ -53,11 +68,23 @@ export default function PostPage({ post }: Props) {
             </Visibility>
 
             <Visibility if={!!desc.code}>
-              <div className='py-4'>
-                <SyntaxHighlighter language={desc.lang!} style={dracula as any} >
+              <div className='py-4 relative'>
+                <SyntaxHighlighter language={desc.lang!} style={dracula as any}>
                   {desc.code!}
                 </SyntaxHighlighter>
+
+                <div className='absolute right-0 top-4 flex flex-col'>
+                <Visibility if={desc.code === code}>
+                  <IconButton onClick={() => copyToClipboard(desc.code!)}><FileCopyTwoTone color={'success'} /></IconButton>
+                </Visibility>
+                <Visibility if={desc.code !== code}>
+                  <IconButton onClick={() => copyToClipboard(desc.code!)}><FileCopyTwoTone /></IconButton>
+                </Visibility>
+                </div>
+                
+
               </div>
+              
             </Visibility>
 
             <Visibility if={!!desc.link}>
@@ -101,10 +128,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }))
 
   return {
-    fallback: false,
+    fallback: true,
     paths: domains,
   }
 }
+
+
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const domain: string = (context.params?.domain  ?? '') as string
