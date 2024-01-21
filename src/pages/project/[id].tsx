@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Footer from '../../components/core/footer'
 import AppHead from '../../components/core/head'
 import Header from '../../components/core/header'
+import Link from 'next/link'
 
 interface Props { project: Project }
 
@@ -33,9 +34,9 @@ export default function ProjectPage({ project }: Props) {
             {project.description.flatMap((e, index) =>
               (<p key={index} dangerouslySetInnerHTML={{__html: e}} className='w-full py-2'></p>)
             )}
-            <a href={project.link} target="_blank" rel="noreferrer">
+            <Link href={project.link} target="_blank" rel="noreferrer">
               <button className='button-primary'>Acessar projeto</button>
-            </a>
+            </Link>
           </section>
 
           

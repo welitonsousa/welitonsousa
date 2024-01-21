@@ -9,6 +9,7 @@ import React, { useState, useEffect } from "react";
 import { Prisma } from "../../lib/prisma"
 import Visibility from "../../components/visibility"
 import { GetStaticProps } from "next"
+import Link from "next/link"
 
 interface Props { posts: IPost[] }
 
@@ -53,7 +54,7 @@ export default function PostsPage({ posts }: Props) {
 
         <Visibility if={!!postsList.length}>
           {postsList.filter(filterPosts).flatMap((post: IPost, index) => {
-            return <a href={'/post/' + post.domain}>
+            return <Link href={'/post/' + post.domain}>
               <div
                 className="w-full h-96 bg-slate-800 rounded-md hover:bg-slate-700 cursor-pointe"
                
@@ -71,7 +72,7 @@ export default function PostsPage({ posts }: Props) {
                   <p>{post.smallDescription}</p>
                 </div>
               </div>
-            </a>
+            </Link>
           })}
         </Visibility>
 

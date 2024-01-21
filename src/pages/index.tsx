@@ -10,6 +10,7 @@ import Divider from '../components/Divider'
 import ProjectCard from '../components/ProjectCard'
 import AppHead from '../components/core/head'
 import Footer from '../components/core/footer'
+import Link from 'next/link'
 
 
 export interface HomeProps {
@@ -50,9 +51,9 @@ export default function Home(props: HomeProps) {
             <div className='max-sm:text-justify text-center leading-6 flex flex-col gap-4'>
               <h2>Olá, meu nome é Weliton de Sousa Araújo👋</h2>
               <p>Sou aluno da Universidade Federal do Piauí e Desenvolvedor de software (sites e aplicativos) <strong className='text-[#0969da]'>desde 2018.</strong></p>
-              <p>Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com <strong className='text-[#0969da]'>Flutter e VueJs</strong> em um chat online em tempo real utilizando websocket.</p> 
+              <p>Apaixonado por programação e fascinado em descobrir novas tecnologias. Atualmente estou trabalhando com <strong className='text-[#0969da]'>Flutter e VueJs</strong> em um chat online em tempo real utilizando websocket.</p>
               <p>Umas das coisas que mais amo na programação é o orientação a objetos, e levo muito a sério este paradigma.</p>
-              <p>Sou um desenvolvedor que gosta de trabalhar em equipe, e que está sempre disposto a aprender e ensinar.</p> 
+              <p>Sou um desenvolvedor que gosta de trabalhar em equipe, e que está sempre disposto a aprender e ensinar.</p>
               <p>Sou um programador experiente e conto com diversos projetos no portfólio, onde já publiquei apps construídos para IOS, Android, Windows, MacOS e IPadOS</p>
             </div>
             <div className='w-full'>
@@ -67,7 +68,7 @@ export default function Home(props: HomeProps) {
             {props.tecs.flatMap((e, index) => (<AppCard
               title={e.name}
               key={index}
-              onClick={undefined}
+              navigate=''
               backgroundColor={e.bg}
             />)
             )}
@@ -78,11 +79,12 @@ export default function Home(props: HomeProps) {
           <Divider title='Projetos' />
           <div className='grid max-sm:grid-cols-1 max-md:grid-cols-2 grid-cols-3 justify-items-center pt-4 gap-2'>
             {props.projects.flatMap((e, index) => (
-              <div
+              <Link
+                href={'/project/' + Formatters.replaceAll(e.name)}
                 key={index}
-                onClick={() => goToProject(Formatters.replaceAll(e.name))} className="w-full">
+                className="w-full">
                 <ProjectCard project={e} />
-              </div>
+              </Link>
             ))}
           </div>
         </section>

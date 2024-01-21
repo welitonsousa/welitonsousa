@@ -15,7 +15,7 @@ export const profileData: HomeProps = {
     },
     {
       "name": "Email",
-      "link": "welitonubuntu@gmail.com",
+      "link": "mailto:welitonubuntu@gmail.com",
       "bg": "#AC0101"
     },
     {
