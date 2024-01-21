@@ -23,14 +23,6 @@ export interface HomeProps {
 
 
 export default function Home(props: HomeProps) {
-  const router = useRouter()
-  function goToProject(id: string) {
-    router.push('/project/' + id)
-  }
-  function goToPosts() {
-    router.push('/post')
-  }
-
 
   return (
     <div className='flex row justify-center'>
@@ -56,9 +48,9 @@ export default function Home(props: HomeProps) {
               <p>Sou um desenvolvedor que gosta de trabalhar em equipe, e que está sempre disposto a aprender e ensinar.</p>
               <p>Sou um programador experiente e conto com diversos projetos no portfólio, onde já publiquei apps construídos para IOS, Android, Windows, MacOS e IPadOS</p>
             </div>
-            <div className='w-full'>
-              <button className='button-primary' onClick={goToPosts}>Veja os últimos posts</button>
-            </div>
+            <Link className='w-full' href={'/post'}>
+              <button className='button-primary'>Veja os últimos posts</button>
+            </Link>
           </div>
         </main>
 
