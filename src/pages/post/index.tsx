@@ -65,7 +65,7 @@ export default function PostsPage({ posts }: Props) {
                   alt={post.title}
                   width={100}
                   height={100}
-                  className="rounded-t-md w-full h-1/2 object-cover"
+                  className="rounded-t-md w-full h-1/2 object-cover pt-3"
                 />
                 <div className="h-1/2 p-2 overflow-hidden">
                   <h4 className="text-[1.5rem]">{post.title}</h4>

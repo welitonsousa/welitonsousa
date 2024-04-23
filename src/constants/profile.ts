@@ -76,6 +76,8 @@ export const profileData: HomeProps = {
       "image": "https://gestor.fastzap.chat/assets/logo-fastzap-ae968496.svg",
       "link": "https://play.google.com/store/apps/details?id=app.fastzap.chat",
       "screenshots": [
+        
+        { link: "https://store-images.s-microsoft.com/image/apps.8392.14523370371191278.9f1254f1-9d46-4856-b2ed-1d7639a3bd57.a81e7dca-0665-44f3-89fa-d02b4ff5c42e", proportion: '3' },
         { link: "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/login.png", proportion: '1' },
         { link: "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/home.png", proportion: '1' },
         { link: "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/drawer.png", proportion: '1' },
