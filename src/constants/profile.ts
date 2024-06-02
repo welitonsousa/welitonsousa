@@ -63,6 +63,24 @@ export const profileData: HomeProps = {
   ],
   "projects": [
     {
+      "name": "Ludolero",
+      "small": "App para Android e IOS de organização de jogos e de eventos",
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #BLOC &nbsp; #GET_IT &nbsp; &nbsp; #CLEAN_ARCH &nbsp; &nbsp;",
+        "Ludolero é um aplicativo de organização de jogos e eventos, onde é possível criar eventos e convidar amigos para participar.",
+        "Este projeto foi idealizado pela startup Tabnulero, e fui vencedor do premio Centelha, onde foi possível desenvolver o aplicativo e lançar na Play Store e na App Store.",
+        "O aplicativo foi desenvolvido com o intuito de facilitar a organização de jogos e eventos, onde é possível criar eventos, convidar amigos para participar, e também, gerenciar os participantes e as partidas.",
+        "O aplicativo foi desenvolvido com Flutter, que é um framework de desenvolvimento de aplicativos multiplataforma, permitindo o desenvolvimento de aplicativos para Android e IOS com uma única base de código.",
+      ],
+      "image": "https://gitlab.com/welitonsousa/images/-/raw/main/tabulero/Group_1.png",
+      "link": "",
+      "screenshots": [        
+        { link: "https://gitlab.com/welitonsousa/images/-/raw/main/tabulero/Screenshot_1.png", proportion: '1' },
+        { link: "https://gitlab.com/welitonsousa/images/-/raw/main/tabulero/Screenshot_2.png", proportion: '1' },
+        { link: "https://gitlab.com/welitonsousa/images/-/raw/main/tabulero/Screenshot_3.png", proportion: '1' },
+      ]
+    },
+    {
       "name": "Fastzap",
       "small": "Site e app (Android, IOS, MacOS, IpadOS e Windows) de chat online",
       "description": [
@@ -71,7 +89,7 @@ export const profileData: HomeProps = {
         "Onde com apenas 1 número de Whatsapp, a empresa consegue concentrar inúmeros atendimentos, e com isso, consegue ter um histórico de conversas, e também, consegue ter uma visão geral de todos os atendimentos que estão sendo realizados.",
         "Possuindo um controle total de todos os seus atendentes e clientes, podendo adicionar, remover, bloquear e desbloquear atendentes e clientes, além de poder visualizar o histórico de conversas de cada atendente e cliente.",
         "Além disso, a aplicação possui uma dashboard para o gestor do estabelecimento, para o mesmo poder ter um visão e controle de leads de vendas no seu sistema."
-      
+        
       ],
       "image": "https://gestor.fastzap.chat/assets/logo-fastzap-ae968496.svg",
       "link": "https://play.google.com/store/apps/details?id=app.fastzap.chat",
@@ -83,6 +101,23 @@ export const profileData: HomeProps = {
         { link: "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/drawer.png", proportion: '1' },
         { link: "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/chat.png", proportion: '1' },
         { link: "https://gitlab.com/welitonsousa/images/-/raw/main/screenshots/fastzap/chat_opt.png", proportion: '1' }
+      ]
+    },
+    {
+      "name": "game Notion",
+      "small": "App para organização de gamers, disponível para: Android, IOS, Windows e MacOS",
+      "description": [
+        "#FLUTTER &nbsp; &nbsp; #GETX &nbsp; &nbsp; #CLEAN_ARCH &nbsp; &nbsp;",
+        "Este é um aplicativo Flutter que utiliza o pacote GetX para gerenciamento de estado e integração com a API da Twitch e IGDB (Internet Game Database). O aplicativo permite aos usuários acessar informações sobre jogos, streams e outros conteúdos relacionados à Twitch, através da API da IGDB.",
+        "Além disso, este aplicativo permite que os dados do usuário sejam salvos no Firebase Storage, possibilitando o acesso a esses dados em outros dispositivos. Ele oferece suporte às plataformas Android, iOS, macOS, Windows e Linux.",
+      ],
+      "image": "https://raw.githubusercontent.com/welitonsousa/game_notation/main/assets/images/logo.png",
+      "link": "",
+      "screenshots": [        
+        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/android-light.png", proportion: '1' },
+        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/android-dark.png", proportion: '1' },
+        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/ios-light.png", proportion: '1' },
+        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/game-notion.gif", proportion: '3' },
       ]
     },
     {

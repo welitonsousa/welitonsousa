@@ -34,9 +34,9 @@ export default function ProjectPage({ project }: Props) {
             {project.description.flatMap((e, index) =>
               (<p key={index} dangerouslySetInnerHTML={{__html: e}} className='w-full py-2'></p>)
             )}
-            <Link href={project.link} target="_blank" rel="noreferrer">
+           {project.link && <Link href={project.link} target="_blank" rel="noreferrer">
               <button className='button-primary'>Acessar projeto</button>
-            </Link>
+            </Link>}
           </section>
 
           
@@ -47,7 +47,7 @@ export default function ProjectPage({ project }: Props) {
                 width={1000}
                 height={1000}
                 key={index}
-                className={`col-span-${e.proportion}`}
+                className={`col-span-${e.proportion} max-h-[630px] object-scale-down`}
                 alt={`captura de imagem - ${index + 1}`}
               />
             ))}

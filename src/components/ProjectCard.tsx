@@ -10,7 +10,7 @@ export default function ProjectCard({project}: Props) {
     <div className="text-center bg-gray-800 rounded-lg w-full p-4 h-64 cursor-pointer">
       
       <div className="h-1/3 flex justify-center">
-        <Image src={project.image} alt="imagem representativa do projeto" width={200} height={200} className="self-center"/>
+        <Image src={project.image} alt="imagem representativa do projeto" width={200} height={200} className="self-center max-h-20 w-auto"/>
       </div>
       
       <div className="flex flex-col h-2/3 justify-center">
