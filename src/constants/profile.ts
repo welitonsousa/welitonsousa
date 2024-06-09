@@ -114,9 +114,11 @@ export const profileData: HomeProps = {
       "image": "https://raw.githubusercontent.com/welitonsousa/game_notation/main/assets/images/logo.png",
       "link": "",
       "screenshots": [        
+        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/ios-light.png", proportion: '1' },
+        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/ios-dark.png", proportion: '1' },
+        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/ios-system.png", proportion: '1' },
         { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/android-light.png", proportion: '1' },
         { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/android-dark.png", proportion: '1' },
-        { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/ios-light.png", proportion: '1' },
         { link: "https://github.com/welitonsousa/game_notation/raw/main/assets/screenshots/game-notion.gif", proportion: '3' },
       ]
     },
