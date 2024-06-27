@@ -128,7 +128,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }))
 
   return {
-    fallback: true,
+    fallback: 'blocking',
     paths: domains,
   }
 }
@@ -148,5 +148,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {post: {...post, createdAt: post?.createdAt.toISOString() }},
     revalidate: 60,
+    
   }
 }
