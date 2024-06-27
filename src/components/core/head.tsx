@@ -4,7 +4,7 @@ interface Props {title?: string, content: string | null, image: string | null | 
 
 export default function AppHead(props: Props) {
   return <Head>
-    <title>{props.title ? `welitonsousa.shop - ${props.title}`: 'welitonsousa.shop'}</title>
+    <title>{props.title ? props.title: 'Weliton Sousa'}</title>
     <meta name="description" content={props.content || 'Weliton Sousa - Blog sobre tecnologias'} />
     <meta property="og:image" content={props.image || 'https://welitonsousa.shop/logo.png'} />
     <link rel="icon" href="/favicon.ico" />
