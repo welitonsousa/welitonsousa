@@ -1,17 +1,13 @@
-import { useRouter } from "next/router";
-import Head from "../components/core/head";
+import Link from "next/link";
+
 
 export default function NotFoundPage() {
-  const router = useRouter()
-  function goToHome() {
-    router.push('/')
-  }
-
-  return <div className="h-screen grid justify-center content-center">
-    <Head image={null} content={null} title="Página não encontrada"/>
+  return <div className="grid justify-center content-center">
     <main className="text-center">
       <h1 className="text-4xl pb-10">Página não encontrada</h1>
-      <button className="button-primary" onClick={goToHome}>Voltar ao início</button>
+      <Link href={'/'} className="button-primary border px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-white">
+        Voltar ao início
+      </Link>
     </main>
   </div>
 }

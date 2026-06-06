@@ -1,6 +1,5 @@
-import { HomeProps } from "../pages";
 
-export const profileData: HomeProps = {
+export const profileData = {
   "image": "https://avatars.githubusercontent.com/u/64853142?v=4",
   "social": [
     {
@@ -149,7 +148,7 @@ export const profileData: HomeProps = {
         "Nesta aplicação, foram obtidos diversos conhecimentos novos, com uma poderosa aplicação de montagem de uma carrinho de comida, com pagamento via PIX",
         "Aplicativo de delivery desenvolvido para aprendizado de arquitetura limpa junto com o GETX, um poderoso sistema de injeção de dependências"],
       
-        "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
+      "image": "https://github.com/welitonsousa/vakinha_burguer/blob/main/assets/images/logo.png?raw=true",
       "link": "https://github.com/welitonsousa/vakinha_burguer",
       "screenshots": [
         { proportion: '1', link: "https://github.com/welitonsousa/vakinha_burguer/raw/main/assets/screenshots/splash.png" },
@@ -208,7 +207,7 @@ export const profileData: HomeProps = {
         "Porem enquanto o app desenvolvido durante o curso foi feito usando o React Native, eu decidi desenvolver o app usando o Flutter, para que eu pudesse aprender mais sobre o framework, e assim, poder comparar com o React Native."
       ],
       
-        "image": "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/images/nlw-green.png?raw=true",
+      "image": "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/images/nlw-green.png?raw=true",
       "link": "https://github.com/welitonsousa/nlw-copa/",
       "screenshots": [
         {proportion: '3', link: "https://github.com/welitonsousa/nlw-copa/blob/main/web/assets/screenshots/home.png?raw=true"},
