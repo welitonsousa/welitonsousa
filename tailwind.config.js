@@ -1,10 +1,13 @@
+const typography = require('@tailwindcss/typography');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './**/*.tsx'
   ],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class',
+  plugins: [typography],
   theme: {
    
     screens: {
@@ -971,5 +974,7 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

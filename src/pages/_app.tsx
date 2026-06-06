@@ -1,23 +1,15 @@
-import './../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import type { AppProps } from 'next/app';
 
-
-
-const darkTheme = createTheme({
-  palette: { mode: 'dark' },
-});
+import { Layout } from '@/components/layout';
+import { ThemeProvider } from '@/components/theme-provider';
+import '@/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-
-  return <>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Component {...pageProps} />
+  return (
+    <ThemeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
-    <ToastContainer theme="dark" />
-  </>
+  );
 }

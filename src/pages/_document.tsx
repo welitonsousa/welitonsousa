@@ -1,18 +1,37 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
 
-export default function Document() {
-  return (
-    <Html lang="pt-BR">
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-      </Head>
-      <body className="bg-gray-900 text-white font-[Comfortaa]">
-        <Main />
-        <NextScript />
-       
-      </body>
-    </Html>
-  )
+const themeScript = `
+(function() {
+  try {
+    var storageKey = 'theme';
+    var storedTheme = localStorage.getItem(storageKey);
+    var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var theme = storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : systemTheme;
+    var root = document.documentElement;
+
+    root.classList.toggle('dark', theme === 'dark');
+    root.style.colorScheme = theme;
+  } catch (error) {}
+})();
+`;
+
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="pt-BR" suppressHydrationWarning>
+        <Head>
+          <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
