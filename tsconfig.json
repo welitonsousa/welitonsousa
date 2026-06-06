@@ -27,14 +27,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "moduleResolution": "node"
+    // "moduleResolution": "node"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "./src/**/*.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/constants/profile2.jjs"
   ],
   "exclude": [
     "node_modules"

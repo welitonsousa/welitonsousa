@@ -14,7 +14,7 @@ export async function getServerSideProps({
 }: {
   params: { slug: string };
 }) {
-  const post = await getPost(params.slug);
+  const post = await getPost(params.slug, 'projects');
 
   if (!post) return { notFound: true };
   return { props: { post } };

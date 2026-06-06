@@ -24,6 +24,18 @@ export function Header() {
         <div className="flex items-center gap-3">
           <nav className="hidden items-center gap-2 sm:flex">
             <Link
+              href="/projects"
+              className="rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+            >
+              Projetos
+            </Link>
+            <Link
+              href="/posts"
+              className="rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+            >
+              Posts
+            </Link>
+            <Link
               href="/"
               className="rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
             >
