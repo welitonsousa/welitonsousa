@@ -6,6 +6,8 @@ import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark';
 // import html from 'remark-html';
+import rehypePrettyCode from 'rehype-pretty-code';
+import { transformerCopyButton } from '@rehype-pretty/transformers';
 
 const CONTENT_PATH = path.join(process.cwd(), 'src', 'content');
 
@@ -29,10 +31,17 @@ export async function getPost(
   const { data, content } = matter(fileContent);
 
   const processedContent = await remark()
-    .use(remarkRehype, {
-      allowDangerousHtml: true,
-    })
+    .use(remarkRehype, { allowDangerousHtml: true})
     .use(rehypeRaw)
+    .use(rehypePrettyCode, {
+      theme: 'dracula-soft',
+      transformers: [
+        transformerCopyButton({
+          visibility: 'hover',
+          feedbackDuration: 3000,
+        }),
+      ],
+    })
     .use(rehypeStringify)
     .process(content);
 

@@ -50,7 +50,7 @@ export default function PostsList({ posts, title, description, endpoint }: Posts
       border border-slate-200/80 bg-white/75 px-6 py-10 
       shadow-2xl shadow-slate-900/5 backdrop-blur-xl
     dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/20 sm:px-10 sm:py-14">
-        <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-sky-400/20 blur-3xl dark:bg-sky-500/10" />
+        <div className="absolute -top-24 h-64 w-64 rounded-full bg-sky-400/20 blur-3xl dark:bg-sky-500/10" />
         <div className="absolute -bottom-28 left-1/3 h-56 w-56 rounded-full bg-indigo-400/10 blur-3xl dark:bg-indigo-500/10" />
 
         <div className="relative max-w-3xl">
